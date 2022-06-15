@@ -11,7 +11,7 @@ import Nimble
 
 class GithubRepoOwnerTests: XCTestCase {
 
-	func testInit_GithubRepo_withProperties() throws {
+	func testInit_GithubRepoOwner_withProperties() throws {
 		// Given
 		let id = 123
 		let login = "OwnerLogin"
