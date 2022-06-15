@@ -1,5 +1,5 @@
 //
-//  GithubRepoOwnerStructTests.swift
+//  GithubRepoOwnerTests.swift
 //  GithubReposTests
 //
 //  Created by Rayan Saeed on 15/06/2022.
@@ -9,7 +9,7 @@ import XCTest
 import Nimble
 @testable import GithubRepos
 
-class GithubRepoOwnerStructTests: XCTestCase {
+class GithubRepoOwnerTests: XCTestCase {
 
 	func testInit_GithubRepo_withProperties() throws {
 		// Given
