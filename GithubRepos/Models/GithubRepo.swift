@@ -12,19 +12,19 @@ struct GithubRepo: Codable, Equatable, Identifiable {
 	let id: Int
 
 	/// Name of the repository
-	var name: String
+	let name: String
 
 	/// Owner of the repository
-	var owner: GithubRepoOwner
+	let owner: GithubRepoOwner
 
 	/// Description of the repository
-	var description: String
+	let description: String
 
 	/// Primary language of the repository
-	var language: String
+	let language: String
 
 	/// Stars count of the repository
-	var starsCount: Int
+	let starsCount: Int
 
 	enum CodingKeys: String, CodingKey {
 		case id, name, owner, description, language

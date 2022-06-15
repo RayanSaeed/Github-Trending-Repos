@@ -12,10 +12,10 @@ struct GithubRepoOwner: Codable, Equatable, Identifiable {
 	let id: Int
 
 	/// Name of the repository's owner
-	var login: String
+	let login: String
 
 	/// Url of owner's avatar
-	var avatarUrl: String
+	let avatarUrl: String
 
 	enum CodingKeys: String, CodingKey {
 		case id, login
