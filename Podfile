@@ -10,6 +10,8 @@ target 'GithubRepos' do
 	target 'GithubReposTests' do
 		inherit! :search_paths
 		# Pods for testing
+		pod 'Nimble'
+		
 	end
 
 end
