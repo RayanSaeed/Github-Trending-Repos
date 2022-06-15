@@ -29,7 +29,7 @@ class GithubRepoStructTests: XCTestCase {
 		let starsCount = 786
 
 		// When
-		let repo = GithubRepo(
+		let sut = GithubRepo(
 			id: id,
 			name: name,
 			owner: repoOwner,
@@ -39,12 +39,12 @@ class GithubRepoStructTests: XCTestCase {
 		)
 
 		// Then
-		expect(repo).toNot(beNil())
-		expect(repo.id).to(equal(id))
-		expect(repo.name).to(equal(name))
-		expect(repo.owner).to(equal(repoOwner))
-		expect(repo.description).to(equal(description))
-		expect(repo.language).to(equal(language))
-		expect(repo.starsCount).to(equal(starsCount))
+		expect(sut).toNot(beNil())
+		expect(sut.id).to(equal(id))
+		expect(sut.name).to(equal(name))
+		expect(sut.owner).to(equal(repoOwner))
+		expect(sut.description).to(equal(description))
+		expect(sut.language).to(equal(language))
+		expect(sut.starsCount).to(equal(starsCount))
 	}
 }

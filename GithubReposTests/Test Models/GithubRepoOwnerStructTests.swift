@@ -18,17 +18,17 @@ class GithubRepoOwnerStructTests: XCTestCase {
 		let avatarUrl = "OwnerAvatarUrl"
 
 		// When
-		let owner = GithubRepoOwner(
+		let sut = GithubRepoOwner(
 			id: id,
 			login: login,
 			avatarUrl: avatarUrl
 		)
 
 		// Then
-		expect(owner).toNot(beNil())
-		expect(owner.id).to(equal(id))
-		expect(owner.login).to(equal(login))
-		expect(owner.avatarUrl).to(equal(avatarUrl))
+		expect(sut).toNot(beNil())
+		expect(sut.id).to(equal(id))
+		expect(sut.login).to(equal(login))
+		expect(sut.avatarUrl).to(equal(avatarUrl))
 	}
 }
 
