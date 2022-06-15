@@ -11,7 +11,7 @@ import Nimble
 
 class GithubRepoOwnerTests: XCTestCase {
 
-	func testInit_GithubRepoOwner_withProperties() throws {
+	func testInit_GithubRepoOwner_withProperties() {
 		let id = 123
 		let login = "OwnerLogin"
 		let avatarUrl = "OwnerAvatarUrl"
