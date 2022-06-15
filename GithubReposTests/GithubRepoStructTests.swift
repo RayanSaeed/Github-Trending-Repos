@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import Nimble
 @testable import GithubRepos
 
 class GithubRepoStructTests: XCTestCase {
@@ -18,8 +19,11 @@ class GithubRepoStructTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    func testInit_GithubRepo_withID() throws {
+		let repo = GithubRepo(id: 123)
 
+		expect(repo).toNot(beNil())
+		expect(repo.id).to(equal(123))
 	}
 
 }
