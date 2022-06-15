@@ -1,0 +1,16 @@
+{
+	"items": [
+		{
+			"id": 12345,
+			"name": "go",
+			"owner": {
+				"id": 67890,
+				"login": "golang",
+				"avatar_url": "https://avatars.githubusercontent.com/u/4314092?v=4",
+			},
+			"description": "The Go programming language",
+			"stargazers_count": 777,
+			"language": "Go"
+		}
+	]
+}

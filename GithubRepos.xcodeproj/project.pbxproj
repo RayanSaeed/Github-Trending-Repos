@@ -12,6 +12,7 @@
 		C15A45E12859F5F400F97EAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C15A45DF2859F5F400F97EAF /* Main.storyboard */; };
 		C15A45E32859F5F500F97EAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C15A45E22859F5F500F97EAF /* Assets.xcassets */; };
 		C15A45E62859F5F500F97EAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C15A45E42859F5F500F97EAF /* LaunchScreen.storyboard */; };
+		C15A460C2859F72000F97EAF /* github_repo_response.json in Resources */ = {isa = PBXBuildFile; fileRef = C15A460B2859F72000F97EAF /* github_repo_response.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		C15A45E72859F5F500F97EAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C15A45EC2859F5F500F97EAF /* GithubReposTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubReposTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C15A45F62859F5F500F97EAF /* GithubReposUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubReposUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C15A460B2859F72000F97EAF /* github_repo_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = github_repo_response.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		C15A45EF2859F5F500F97EAF /* GithubReposTests */ = {
 			isa = PBXGroup;
 			children = (
+				C15A460A2859F71300F97EAF /* JSON */,
 			);
 			path = GithubReposTests;
 			sourceTree = "<group>";
@@ -113,6 +116,14 @@
 				C15A45E42859F5F500F97EAF /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C15A460A2859F71300F97EAF /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				C15A460B2859F72000F97EAF /* github_repo_response.json */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C15A460C2859F72000F97EAF /* github_repo_response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
