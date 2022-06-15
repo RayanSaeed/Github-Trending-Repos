@@ -9,13 +9,9 @@
 /* Begin PBXBuildFile section */
 		C15A45DA2859F5F400F97EAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A45D92859F5F400F97EAF /* AppDelegate.swift */; };
 		C15A45DC2859F5F400F97EAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A45DB2859F5F400F97EAF /* SceneDelegate.swift */; };
-		C15A45DE2859F5F400F97EAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A45DD2859F5F400F97EAF /* ViewController.swift */; };
 		C15A45E12859F5F400F97EAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C15A45DF2859F5F400F97EAF /* Main.storyboard */; };
 		C15A45E32859F5F500F97EAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C15A45E22859F5F500F97EAF /* Assets.xcassets */; };
 		C15A45E62859F5F500F97EAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C15A45E42859F5F500F97EAF /* LaunchScreen.storyboard */; };
-		C15A45F12859F5F500F97EAF /* GithubReposTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A45F02859F5F500F97EAF /* GithubReposTests.swift */; };
-		C15A45FB2859F5F500F97EAF /* GithubReposUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A45FA2859F5F500F97EAF /* GithubReposUITests.swift */; };
-		C15A45FD2859F5F500F97EAF /* GithubReposUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A45FC2859F5F500F97EAF /* GithubReposUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,16 +35,12 @@
 		C15A45D62859F5F400F97EAF /* GithubRepos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubRepos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C15A45D92859F5F400F97EAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C15A45DB2859F5F400F97EAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C15A45DD2859F5F400F97EAF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C15A45E02859F5F400F97EAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C15A45E22859F5F500F97EAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C15A45E52859F5F500F97EAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C15A45E72859F5F500F97EAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C15A45EC2859F5F500F97EAF /* GithubReposTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubReposTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C15A45F02859F5F500F97EAF /* GithubReposTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubReposTests.swift; sourceTree = "<group>"; };
 		C15A45F62859F5F500F97EAF /* GithubReposUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubReposUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C15A45FA2859F5F500F97EAF /* GithubReposUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubReposUITests.swift; sourceTree = "<group>"; };
-		C15A45FC2859F5F500F97EAF /* GithubReposUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubReposUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +73,6 @@
 			children = (
 				C15A45D82859F5F400F97EAF /* GithubRepos */,
 				C15A45EF2859F5F500F97EAF /* GithubReposTests */,
-				C15A45F92859F5F500F97EAF /* GithubReposUITests */,
 				C15A45D72859F5F400F97EAF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -99,13 +90,10 @@
 		C15A45D82859F5F400F97EAF /* GithubRepos */ = {
 			isa = PBXGroup;
 			children = (
+				C15A45E72859F5F500F97EAF /* Info.plist */,
 				C15A45D92859F5F400F97EAF /* AppDelegate.swift */,
 				C15A45DB2859F5F400F97EAF /* SceneDelegate.swift */,
-				C15A45DD2859F5F400F97EAF /* ViewController.swift */,
-				C15A45DF2859F5F400F97EAF /* Main.storyboard */,
-				C15A45E22859F5F500F97EAF /* Assets.xcassets */,
-				C15A45E42859F5F500F97EAF /* LaunchScreen.storyboard */,
-				C15A45E72859F5F500F97EAF /* Info.plist */,
+				C15A46092859F69000F97EAF /* Resources */,
 			);
 			path = GithubRepos;
 			sourceTree = "<group>";
@@ -113,18 +101,18 @@
 		C15A45EF2859F5F500F97EAF /* GithubReposTests */ = {
 			isa = PBXGroup;
 			children = (
-				C15A45F02859F5F500F97EAF /* GithubReposTests.swift */,
 			);
 			path = GithubReposTests;
 			sourceTree = "<group>";
 		};
-		C15A45F92859F5F500F97EAF /* GithubReposUITests */ = {
+		C15A46092859F69000F97EAF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C15A45FA2859F5F500F97EAF /* GithubReposUITests.swift */,
-				C15A45FC2859F5F500F97EAF /* GithubReposUITestsLaunchTests.swift */,
+				C15A45DF2859F5F400F97EAF /* Main.storyboard */,
+				C15A45E22859F5F500F97EAF /* Assets.xcassets */,
+				C15A45E42859F5F500F97EAF /* LaunchScreen.storyboard */,
 			);
-			path = GithubReposUITests;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +246,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C15A45DE2859F5F400F97EAF /* ViewController.swift in Sources */,
 				C15A45DA2859F5F400F97EAF /* AppDelegate.swift in Sources */,
 				C15A45DC2859F5F400F97EAF /* SceneDelegate.swift in Sources */,
 			);
@@ -268,7 +255,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C15A45F12859F5F500F97EAF /* GithubReposTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +262,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C15A45FB2859F5F500F97EAF /* GithubReposUITests.swift in Sources */,
-				C15A45FD2859F5F500F97EAF /* GithubReposUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
