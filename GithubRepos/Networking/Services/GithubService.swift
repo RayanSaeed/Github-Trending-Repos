@@ -11,8 +11,8 @@ protocol GithubServiceable {
 	/// This function makes a network request for the `trendingRepos` endpoint
 	/// - Returns:
 	/// Returns a `Result` type
-	///  - `.success:` A model object of `GithubRepoResponse`
-	///  - `.failure:` An error object of `APIError`
+	///  - `success:` A model object of `GithubRepoResponse`
+	///  - `failure:` An error object of `APIError`
 	func getTrendingRepos() async -> Result<TrendingReposResult, APIError>
 }
 
@@ -26,6 +26,10 @@ struct GithubService: HTTPClient, GithubServiceable {
 	}
 
 	func getTrendingRepos() async -> Result<TrendingReposResult, APIError> {
+		/*
+		 Read the documentation here to understand how the caching is working here:
+		 https://developer.apple.com/documentation/foundation/nsurlrequest/cachepolicy/useprotocolcachepolicy
+		 */
 		await execute(
 			session: session,
 			endpoint: GithubEndpoint.trendingRepos,

@@ -9,12 +9,6 @@ import XCTest
 import Nimble
 @testable import GithubRepos
 
-
-/*
- Read the documentation here to understand how the caching is working here:
- https://developer.apple.com/documentation/foundation/nsurlrequest/cachepolicy/useprotocolcachepolicy
- */
-
 class GithubServiceTests: XCTestCase {
 
 	func testGithubService_returns_successResponse() async throws {
