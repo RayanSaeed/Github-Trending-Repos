@@ -78,9 +78,7 @@ extension Endpoint {
 	/// Returns the `URLQueryItem`(s) for the given URLRequest
 	private var queryItems: [URLQueryItem]? {
 		// Checks for a GET request and nil-check for parameters.
-		guard method == .get, let parameters = parameters else {
-			return nil
-		}
+		guard method == .get, let parameters = parameters else { return nil }
 		// Convert parameters to query items.
 		return parameters.map { key, value in
 			URLQueryItem(name: key, value: "\(value ?? "")")
