@@ -21,7 +21,7 @@ protocol Endpoint {
 	/// The base URL of our API, to be prepended with endpoint paths.
 	var baseURL: String { get }
 
-	/// The path that will be appended to API's base URL.
+	/// The path that will be appended to API's base URL (must includ /).
 	var path: String { get }
 
 	/// The HTTP method.
@@ -53,7 +53,6 @@ extension Endpoint {
 		// Append all related properties.
 		request.httpMethod = method.rawValue
 		request.allHTTPHeaderFields = headers
-		request.httpBody = jsonBody
 
 		return request
 	}
@@ -69,7 +68,7 @@ extension Endpoint {
 		var components = URLComponents()
 		components.scheme = scheme
 		components.host = baseURL
-		components.path = "/" + path
+		components.path = path
 		components.queryItems = queryItems
 
 		guard let url = components.url else { return nil }
@@ -86,22 +85,5 @@ extension Endpoint {
 		return parameters.map { key, value in
 			URLQueryItem(name: key, value: "\(value ?? "")")
 		}
-	}
-
-	/// Returns the URLRequest body `Data`
-	private var jsonBody: Data? {
-		// Checks for NOT a GET request and nil-check for parameters.
-		guard method != .get, let parameters = parameters else {
-			return nil
-		}
-
-		// Convert parameters to JSON data
-		var jsonBody: Data?
-		do {
-			jsonBody = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
-		} catch {
-			print(error)
-		}
-		return jsonBody
 	}
 }
