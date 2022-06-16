@@ -8,57 +8,28 @@
 import Foundation
 @testable import GithubRepos
 
-enum EndpointStub {
-	case simple
-	case withParams
-	case withHeaders
-	case withParamsAndHeaders
+enum EndpointStubValid {
+	case validHost
 }
 
-extension EndpointStub: Endpoint {
-	var scheme: String {
-		switch self {
-			case .simple:
-				return "http"
-			case .withParams, .withHeaders, .withParamsAndHeaders:
-				return "https"
-		}
-	}
-
-	var baseURL: String {
-		"api.example.com"
-	}
-
-	var path: String {
-		switch self {
-			case .simple:
-				return "simplePath"
-			case .withParams:
-				return "pathWithParams"
-			case .withHeaders:
-				return "pathWithHeaders"
-			case .withParamsAndHeaders:
-				return "pathWithParamsAndHeaders"
-		}
-	}
-
+extension EndpointStubValid: Endpoint {
+	var scheme: String { "https" }
+	var baseURL: String { "api.example.com" }
+	var path: String { "simplePath" }
 	var method: HTTPMethod { .get }
+	var headers: RequestHeaders? { ["headerKey": "headerValue"] }
+	var parameters: RequestParameters? { ["paramKey": "paramValue"] }
+}
 
-	var headers: RequestHeaders? {
-		switch self {
-			case .simple, .withParams:
-				return nil
-			case .withHeaders, .withParamsAndHeaders:
-				return [ "headerKey": "headerValue" ]
-		}
-	}
+enum EndpointStubInvalid {
+	case invalidHost
+}
 
-	var parameters: RequestParameters? {
-		switch self {
-			case .simple, .withHeaders:
-				return nil
-			case .withParams, .withParamsAndHeaders:
-				return ["paramKey": "paramValue"]
-		}
-	}
+extension EndpointStubInvalid: Endpoint {
+	var scheme: String { "" }
+	var baseURL: String { "" }
+	var path: String { "" }
+	var method: HTTPMethod { .get }
+	var headers: RequestHeaders? { ["headerKey": "headerValue"] }
+	var parameters: RequestParameters? { ["paramKey": "paramValue"] }
 }
