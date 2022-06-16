@@ -1,5 +1,5 @@
 //
-//  GithubRepoTests.swift
+//  RepositoryTests.swift
 //  GithubReposTests
 //
 //  Created by Rayan Saeed on 15/06/2022.
@@ -9,19 +9,19 @@ import XCTest
 import Nimble
 @testable import GithubRepos
 
-class GithubRepoTests: XCTestCase {
+class RepositoryTests: XCTestCase {
 
     func testInit_GithubRepo_withProperties() {
 		// Given
 		let id = 123
 		let name = "RepoName"
-		let repoOwner = GithubRepoOwner(id: 456, login: "OwnerLogin", avatarUrl: "OwnerAvatarUrl")
+		let repoOwner = Owner(id: 456, login: "OwnerLogin", avatarUrl: "OwnerAvatarUrl")
 		let description = "RepoDescription"
 		let language = "RepoLanguage"
 		let starsCount = 786
 
 		// When
-		let sut = GithubRepo(
+		let sut = Repository(
 			id: id,
 			name: name,
 			owner: repoOwner,

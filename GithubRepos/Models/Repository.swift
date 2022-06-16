@@ -1,5 +1,5 @@
 //
-//  GithubRepo.swift
+//  Repository.swift
 //  GithubRepos
 //
 //  Created by Rayan Saeed on 15/06/2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct GithubRepo: Codable, Equatable, Identifiable {
+struct Repository: Codable, Equatable, Identifiable {
 	/// ID of the repository
 	let id: Int
 
@@ -15,13 +15,13 @@ struct GithubRepo: Codable, Equatable, Identifiable {
 	let name: String
 
 	/// Owner of the repository
-	let owner: GithubRepoOwner
+	let owner: Owner
 
 	/// Description of the repository
-	let description: String
+	let description: String?
 
 	/// Primary language of the repository
-	let language: String
+	let language: String?
 
 	/// Stars count of the repository
 	let starsCount: Int
@@ -32,3 +32,20 @@ struct GithubRepo: Codable, Equatable, Identifiable {
 	}
 }
 
+extension Repository {
+	struct Owner: Codable, Equatable, Identifiable {
+		/// ID of the owner
+		let id: Int
+
+		/// Name of the repository's owner
+		let login: String
+
+		/// Url of owner's avatar
+		let avatarUrl: String
+
+		enum CodingKeys: String, CodingKey {
+			case id, login
+			case avatarUrl = "avatar_url"
+		}
+	}
+}

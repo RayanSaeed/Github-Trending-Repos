@@ -1,5 +1,5 @@
 //
-//  GithubRepoOwnerTests.swift
+//  OwnerTests.swift
 //  GithubReposTests
 //
 //  Created by Rayan Saeed on 15/06/2022.
@@ -9,14 +9,14 @@ import XCTest
 import Nimble
 @testable import GithubRepos
 
-class GithubRepoOwnerTests: XCTestCase {
+class OwnerTests: XCTestCase {
 
 	func testInit_GithubRepoOwner_withProperties() {
 		let id = 123
 		let login = "OwnerLogin"
 		let avatarUrl = "OwnerAvatarUrl"
 
-		let sut = GithubRepoOwner(
+		let sut = Owner(
 			id: id,
 			login: login,
 			avatarUrl: avatarUrl
