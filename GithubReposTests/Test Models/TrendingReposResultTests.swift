@@ -1,5 +1,5 @@
 //
-//  TrendingReposResponseTests.swift
+//  TrendingReposResultTests.swift
 //  GithubReposTests
 //
 //  Created by Rayan Saeed on 15/06/2022.
@@ -9,13 +9,13 @@ import XCTest
 import Nimble
 @testable import GithubRepos
 
-class TrendingReposResponseTests: XCTestCase, Mockable {
+class TrendingReposResultTests: XCTestCase, Mockable {
 
-	var sut: TrendingReposResponse!
+	var sut: TrendingReposResult!
 
 	override func setUp() {
 		super.setUp()
-		sut = loadJSON(filename: "github_repo_response", type: TrendingReposResponse.self)
+		sut = loadJSON(filename: "github_repo_response", type: TrendingReposResult.self)
 	}
 
 	func testGithubRepoResponse_loadsFromJSON() {
