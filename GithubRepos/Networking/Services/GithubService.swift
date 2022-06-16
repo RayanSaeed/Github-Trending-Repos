@@ -13,6 +13,24 @@ protocol GithubServiceable {
 	/// Returns a `Result` type
 	///  - `.success:` A model object of `GithubRepoResponse`
 	///  - `.failure:` An error object of `APIError`
-	func getTrendingRepos() async -> Result<GithubRepoResponse, APIError>
+	func getTrendingRepos() async -> Result<TrendingReposResult, APIError>
 }
 
+struct GithubService: HTTPClient, GithubServiceable {
+	let session: URLSession
+	let decoder: JSONDecoder
+
+	init(session: URLSession = .shared, decoder: JSONDecoder = .init()) {
+		self.session = session
+		self.decoder = decoder
+	}
+
+	func getTrendingRepos() async -> Result<TrendingReposResult, APIError> {
+		await execute(
+			session: session,
+			endpoint: GithubEndpoint.trendingRepos,
+			responseModel: TrendingReposResult.self,
+			decoder: decoder
+		)
+	}
+}

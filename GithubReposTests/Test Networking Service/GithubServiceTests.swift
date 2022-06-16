@@ -43,5 +43,4 @@ class GithubServiceTests: XCTestCase {
 				expect(error).to(equal(.noData))
 		}
 	}
-
 }
