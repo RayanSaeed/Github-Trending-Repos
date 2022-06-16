@@ -9,25 +9,25 @@ import Foundation
 @testable import GithubRepos
 
 final class GithubServiceSuccessfulMock: Mockable, GithubServiceable {
-	func getTrendingRepos() async -> Result<GithubRepoResponse, APIError> {
+	func getTrendingRepos() async -> Result<TrendingReposResult, APIError> {
 		return .success(.mock)
 	}
 }
 
 final class GithubServiceFailureMock: Mockable, GithubServiceable {
-	func getTrendingRepos() async -> Result<GithubRepoResponse, APIError> {
+	func getTrendingRepos() async -> Result<TrendingReposResult, APIError> {
 		return .failure(.noData)
 	}
 }
 
-extension GithubRepoResponse {
-	static let mock: GithubRepoResponse = {
+extension TrendingReposResult {
+	static let mock: TrendingReposResult = {
 		.init(repos: [.mock])
 	}()
 }
 
-extension GithubRepo {
-	static let mock: GithubRepo = {
+extension Repository {
+	static let mock: Repository = {
 		.init(
 			id: 123,
 			name: "Repo Name",
@@ -38,8 +38,9 @@ extension GithubRepo {
 	}()
 }
 
-extension GithubRepoOwner {
-	static let mock: GithubRepoOwner = {
+typealias Owner = Repository.Owner
+extension Owner {
+	static let mock: Owner = {
 		.init(id: 789, login: "Owner Login", avatarUrl: "www.ownerAvatarUrl.com")
 	}()
 }
