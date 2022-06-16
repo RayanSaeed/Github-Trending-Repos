@@ -15,7 +15,7 @@ enum EndpointStubValid {
 extension EndpointStubValid: Endpoint {
 	var scheme: String { "https" }
 	var baseURL: String { "api.example.com" }
-	var path: String { "simplePath" }
+	var path: String { "/simplePath" }
 	var method: HTTPMethod { .get }
 	var headers: RequestHeaders? { ["headerKey": "headerValue"] }
 	var parameters: RequestParameters? { ["paramKey": "paramValue"] }
@@ -26,10 +26,10 @@ enum EndpointStubInvalid {
 }
 
 extension EndpointStubInvalid: Endpoint {
-	var scheme: String { "" }
-	var baseURL: String { "" }
-	var path: String { "" }
+	var scheme: String { "http" }
+	var baseURL: String { "someDomain" }
+	var path: String { "invalidPath" }
 	var method: HTTPMethod { .get }
-	var headers: RequestHeaders? { ["headerKey": "headerValue"] }
-	var parameters: RequestParameters? { ["paramKey": "paramValue"] }
+	var headers: RequestHeaders? { nil }
+	var parameters: RequestParameters? { nil }
 }

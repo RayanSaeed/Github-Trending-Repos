@@ -14,7 +14,9 @@ class EndpointTests: XCTestCase {
 	func testEndpoint_invalidRequestGeneration() throws {
 		let sut = EndpointStubInvalid.invalidHost
 
-		let _ = try XCTUnwrap(sut.urlRequest())
+		let urlRequest = sut.urlRequest()
+
+		expect(urlRequest).to(beNil())
 	}
 
 	func testEndpoint_validRequestGeneration_withParamsAndHeaders() throws {
@@ -26,9 +28,10 @@ class EndpointTests: XCTestCase {
 
 		expect(components.scheme).to(equal("https"))
 		expect(components.host).to(equal("api.example.com"))
-		expect(components.path).to(equal("/pathWithParamsAndHeaders"))
+		expect(components.path).to(equal("/simplePath"))
 		expect(components.queryItems?.count).to(equal(1))
 		expect(components.queryItems).to(equal([URLQueryItem(name: "paramKey", value: "paramValue")]))
+		expect(request.httpMethod).to(equal("GET"))
 		expect(request.allHTTPHeaderFields).to(equal(["headerKey": "headerValue"]))
 	}
 }
