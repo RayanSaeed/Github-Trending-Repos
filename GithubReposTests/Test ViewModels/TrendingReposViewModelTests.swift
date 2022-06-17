@@ -11,7 +11,7 @@ import Nimble
 
 class TrendingReposViewModelTests: XCTestCase {
 
-    func testTrendingViewModel_fetchTrendingRepos_success() async {
+    func testTrendingReposViewModel_fetchTrendingRepos_success() async {
 		let mockService = GithubServiceSuccessfulMock()
 		let sut = TrendingReposViewModel(service: mockService)
 
@@ -20,7 +20,7 @@ class TrendingReposViewModelTests: XCTestCase {
 		expect(result).to(equal(.mock))
 	}
 
-	func testTrendingViewModel_fetchTrendingRepos_failure() async {
+	func testTrendingReposViewModel_fetchTrendingRepos_failure() async {
 		let mockService = GithubServiceFailureMock()
 		let sut = TrendingReposViewModel(service: mockService)
 
@@ -29,7 +29,7 @@ class TrendingReposViewModelTests: XCTestCase {
 		expect(result).to(beNil())
 	}
 
-	func testTrendingViewModel_title() {
+	func testTrendingReposViewModel_title() {
 		let sut = TrendingReposViewModelSuccessfulMock()
 
 		let title = sut.navigationBarTitle
