@@ -30,7 +30,7 @@ protocol TrendingReposViewModelable: AnyObject {
 	func fetchTrendingRepos() async -> TrendingReposResult?
 }
 
-final class TrendingReposViewModel: ObservableObject, TrendingReposViewModelable {
+final class TrendingReposViewModel: TrendingReposViewModelable {
 
 	var service: GithubServiceable
 	var navigationBarTitle: String { "Trending" }
@@ -40,7 +40,9 @@ final class TrendingReposViewModel: ObservableObject, TrendingReposViewModelable
 	}
 
 	func fetchTrendingRepos() async -> TrendingReposResult? {
-		switch await service.getTrendingRepos() {
+		let reposResult = await service.getTrendingRepos()
+
+		switch reposResult {
 			case .success(let result):
 				return result
 			case .failure(let error):
