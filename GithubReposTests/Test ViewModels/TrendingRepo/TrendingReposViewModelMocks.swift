@@ -20,7 +20,7 @@ final class TrendingReposViewModelSuccessfulMock: TrendingReposViewModelable {
 
 	func fetchTrendingRepos() async -> TrendingReposResult? {
 		fetchTrendingReposWasCalled = true
-		return .mock
+		return .stub
 	}
 }
 

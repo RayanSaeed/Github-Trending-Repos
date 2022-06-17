@@ -17,7 +17,7 @@ class TrendingReposViewModelTests: XCTestCase {
 
 		let result = await sut.fetchTrendingRepos()
 
-		expect(result).to(equal(.mock))
+		expect(result).to(equal(.stub))
 	}
 
 	func testTrendingReposViewModel_fetchTrendingRepos_failure() async {
