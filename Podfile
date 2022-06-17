@@ -8,6 +8,7 @@ target 'GithubRepos' do
 	# Pods for GithubRepos
 	pod 'lottie-ios'
 	pod 'SkeletonView'
+	pod 'Kingfisher'
 
 	target 'GithubReposTests' do
 		inherit! :search_paths

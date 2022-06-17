@@ -1,24 +1,28 @@
 PODS:
+  - Kingfisher (7.2.4)
   - lottie-ios (3.3.0)
   - Nimble (9.2.1)
   - SkeletonView (1.29.2)
 
 DEPENDENCIES:
+  - Kingfisher
   - lottie-ios
   - Nimble
   - SkeletonView
 
 SPEC REPOS:
   trunk:
+    - Kingfisher
     - lottie-ios
     - Nimble
     - SkeletonView
 
 SPEC CHECKSUMS:
+  Kingfisher: 2457be2121734e69e54a2312ecc0150eb9ae70b3
   lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
   Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
   SkeletonView: 915a80ecc2b6421ab7ac0f0212321c0cc1406472
 
-PODFILE CHECKSUM: 18b929ac27371b5be3e67e5020c476b79cfe25ca
+PODFILE CHECKSUM: 8e58e9cd84057c7ae9fb31d5f84c097628065c57
 
 COCOAPODS: 1.11.3
