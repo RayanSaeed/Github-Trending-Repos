@@ -9,15 +9,6 @@ import Foundation
 
 @available(iOS, deprecated: 15.0, message: "Use the built-in API instead")
 public extension URLSession {
-	/// Start a data task with a URL using async/await.
-	/// - parameter url: The URL to send a request to.
-	/// - returns: A tuple containing the binary `Data` that was downloaded,
-	///   as well as a `URLResponse` representing the server's response.
-	/// - throws: Any error encountered while performing the data task.
-	func data(from url: URL) async throws -> (Data, URLResponse) {
-		try await data(for: URLRequest(url: url))
-	}
-
 	/// Start a data task with a `URLRequest` using async/await.
 	/// - parameter request: The `URLRequest` that the data task should perform.
 	/// - returns: A tuple containing the binary `Data` that was downloaded,
