@@ -13,9 +13,14 @@
 		C125ADFD285A015700D6B604 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125ADFC285A015700D6B604 /* Repository.swift */; };
 		C153BA51285B58B9005BF177 /* URLSession+AsyncAwait.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153BA50285B58B9005BF177 /* URLSession+AsyncAwait.swift */; };
 		C153BA53285BF5A3005BF177 /* GithubEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153BA52285BF5A3005BF177 /* GithubEndpointTests.swift */; };
+		C153BA57285BFD49005BF177 /* TrendingReposViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153BA56285BFD49005BF177 /* TrendingReposViewModelTests.swift */; };
+		C153BA5A285BFD75005BF177 /* TrendingReposViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153BA59285BFD75005BF177 /* TrendingReposViewModel.swift */; };
+		C153BA5D285C06AA005BF177 /* TrendingReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153BA5B285C06AA005BF177 /* TrendingReposViewController.swift */; };
+		C153BA5E285C06AA005BF177 /* TrendingReposViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C153BA5C285C06AA005BF177 /* TrendingReposViewController.xib */; };
+		C153BA60285C1608005BF177 /* TrendingReposViewModelMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153BA5F285C1608005BF177 /* TrendingReposViewModelMocks.swift */; };
+		C153BA63285C20EA005BF177 /* TrendingRepoViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153BA62285C20EA005BF177 /* TrendingRepoViewControllerTests.swift */; };
 		C15A45DA2859F5F400F97EAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A45D92859F5F400F97EAF /* AppDelegate.swift */; };
 		C15A45DC2859F5F400F97EAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A45DB2859F5F400F97EAF /* SceneDelegate.swift */; };
-		C15A45E12859F5F400F97EAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C15A45DF2859F5F400F97EAF /* Main.storyboard */; };
 		C15A45E32859F5F500F97EAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C15A45E22859F5F500F97EAF /* Assets.xcassets */; };
 		C15A45E62859F5F500F97EAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C15A45E42859F5F500F97EAF /* LaunchScreen.storyboard */; };
 		C15A460C2859F72000F97EAF /* github_repo_response.json in Resources */ = {isa = PBXBuildFile; fileRef = C15A460B2859F72000F97EAF /* github_repo_response.json */; };
@@ -27,7 +32,7 @@
 		C1BF3925285A46E30004D5BB /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF3924285A46E30004D5BB /* HTTPMethod.swift */; };
 		C1BF3927285A4CB80004D5BB /* EndpointStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF3926285A4CB80004D5BB /* EndpointStub.swift */; };
 		C1BF392C285AEFAB0004D5BB /* GithubServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF392B285AEFAB0004D5BB /* GithubServiceTests.swift */; };
-		C1BF3931285AF4480004D5BB /* GithubServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF3930285AF4480004D5BB /* GithubServiceMock.swift */; };
+		C1BF3931285AF4480004D5BB /* GithubServiceMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF3930285AF4480004D5BB /* GithubServiceMocks.swift */; };
 		C1BF3935285AF5220004D5BB /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF3934285AF5220004D5BB /* GithubService.swift */; };
 		C1BF3937285AF52D0004D5BB /* GithubEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF3936285AF52D0004D5BB /* GithubEndpoints.swift */; };
 		C1BF3939285AF5810004D5BB /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF3938285AF5810004D5BB /* APIError.swift */; };
@@ -57,10 +62,15 @@
 		C125ADFC285A015700D6B604 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		C153BA50285B58B9005BF177 /* URLSession+AsyncAwait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+AsyncAwait.swift"; sourceTree = "<group>"; };
 		C153BA52285BF5A3005BF177 /* GithubEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubEndpointTests.swift; sourceTree = "<group>"; };
+		C153BA56285BFD49005BF177 /* TrendingReposViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposViewModelTests.swift; sourceTree = "<group>"; };
+		C153BA59285BFD75005BF177 /* TrendingReposViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposViewModel.swift; sourceTree = "<group>"; };
+		C153BA5B285C06AA005BF177 /* TrendingReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposViewController.swift; sourceTree = "<group>"; };
+		C153BA5C285C06AA005BF177 /* TrendingReposViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendingReposViewController.xib; sourceTree = "<group>"; };
+		C153BA5F285C1608005BF177 /* TrendingReposViewModelMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposViewModelMocks.swift; sourceTree = "<group>"; };
+		C153BA62285C20EA005BF177 /* TrendingRepoViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoViewControllerTests.swift; sourceTree = "<group>"; };
 		C15A45D62859F5F400F97EAF /* GithubRepos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubRepos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C15A45D92859F5F400F97EAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C15A45DB2859F5F400F97EAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C15A45E02859F5F400F97EAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C15A45E22859F5F500F97EAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C15A45E52859F5F500F97EAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C15A45E72859F5F500F97EAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -74,7 +84,7 @@
 		C1BF3924285A46E30004D5BB /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		C1BF3926285A4CB80004D5BB /* EndpointStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointStub.swift; sourceTree = "<group>"; };
 		C1BF392B285AEFAB0004D5BB /* GithubServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubServiceTests.swift; sourceTree = "<group>"; };
-		C1BF3930285AF4480004D5BB /* GithubServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubServiceMock.swift; sourceTree = "<group>"; };
+		C1BF3930285AF4480004D5BB /* GithubServiceMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubServiceMocks.swift; sourceTree = "<group>"; };
 		C1BF3934285AF5220004D5BB /* GithubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
 		C1BF3936285AF52D0004D5BB /* GithubEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubEndpoints.swift; sourceTree = "<group>"; };
 		C1BF3938285AF5810004D5BB /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -127,6 +137,49 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		C153BA55285BFCD1005BF177 /* Test ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C153BA5F285C1608005BF177 /* TrendingReposViewModelMocks.swift */,
+				C153BA56285BFD49005BF177 /* TrendingReposViewModelTests.swift */,
+			);
+			path = "Test ViewModels";
+			sourceTree = "<group>";
+		};
+		C153BA58285BFD53005BF177 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				C153BA65285C4286005BF177 /* TrendingRepos */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		C153BA61285C1FB3005BF177 /* Test ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C153BA62285C20EA005BF177 /* TrendingRepoViewControllerTests.swift */,
+			);
+			path = "Test ViewControllers";
+			sourceTree = "<group>";
+		};
+		C153BA64285C4279005BF177 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		C153BA65285C4286005BF177 /* TrendingRepos */ = {
+			isa = PBXGroup;
+			children = (
+				C153BA64285C4279005BF177 /* DataSource */,
+				C153BA59285BFD75005BF177 /* TrendingReposViewModel.swift */,
+				C153BA5B285C06AA005BF177 /* TrendingReposViewController.swift */,
+				C153BA5C285C06AA005BF177 /* TrendingReposViewController.xib */,
+			);
+			path = TrendingRepos;
+			sourceTree = "<group>";
+		};
 		C15A45CD2859F5F400F97EAF = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +210,7 @@
 				C125ADFB285A013E00D6B604 /* Models */,
 				C153BA4F285B58AA005BF177 /* Extensions */,
 				C15A46092859F69000F97EAF /* Resources */,
+				C153BA58285BFD53005BF177 /* Scenes */,
 			);
 			path = GithubRepos;
 			sourceTree = "<group>";
@@ -169,6 +223,8 @@
 				C1BF3914285A05590004D5BB /* Test Models */,
 				C1BF391D285A0EB60004D5BB /* Test Endpoints */,
 				C1BF3928285AEF6E0004D5BB /* Test Networking Service */,
+				C153BA55285BFCD1005BF177 /* Test ViewModels */,
+				C153BA61285C1FB3005BF177 /* Test ViewControllers */,
 			);
 			path = GithubReposTests;
 			sourceTree = "<group>";
@@ -176,7 +232,6 @@
 		C15A46092859F69000F97EAF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C15A45DF2859F5F400F97EAF /* Main.storyboard */,
 				C15A45E22859F5F500F97EAF /* Assets.xcassets */,
 				C15A45E42859F5F500F97EAF /* LaunchScreen.storyboard */,
 			);
@@ -235,7 +290,7 @@
 		C1BF3928285AEF6E0004D5BB /* Test Networking Service */ = {
 			isa = PBXGroup;
 			children = (
-				C1BF3930285AF4480004D5BB /* GithubServiceMock.swift */,
+				C1BF3930285AF4480004D5BB /* GithubServiceMocks.swift */,
 				C1BF392B285AEFAB0004D5BB /* GithubServiceTests.swift */,
 			);
 			path = "Test Networking Service";
@@ -355,7 +410,7 @@
 			files = (
 				C15A45E62859F5F500F97EAF /* LaunchScreen.storyboard in Resources */,
 				C15A45E32859F5F500F97EAF /* Assets.xcassets in Resources */,
-				C15A45E12859F5F400F97EAF /* Main.storyboard in Resources */,
+				C153BA5E285C06AA005BF177 /* TrendingReposViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,7 +501,9 @@
 				C1BF393B285AF5940004D5BB /* HTTPClient.swift in Sources */,
 				C15A45DC2859F5F400F97EAF /* SceneDelegate.swift in Sources */,
 				C153BA51285B58B9005BF177 /* URLSession+AsyncAwait.swift in Sources */,
+				C153BA5A285BFD75005BF177 /* TrendingReposViewModel.swift in Sources */,
 				C1BF3937285AF52D0004D5BB /* GithubEndpoints.swift in Sources */,
+				C153BA5D285C06AA005BF177 /* TrendingReposViewController.swift in Sources */,
 				C1BF3923285A44E50004D5BB /* Endpoint.swift in Sources */,
 				C125ADFD285A015700D6B604 /* Repository.swift in Sources */,
 			);
@@ -456,14 +513,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C153BA57285BFD49005BF177 /* TrendingReposViewModelTests.swift in Sources */,
 				C1BF3927285A4CB80004D5BB /* EndpointStub.swift in Sources */,
 				C125ADF52859F80700D6B604 /* Mockable.swift in Sources */,
-				C1BF3931285AF4480004D5BB /* GithubServiceMock.swift in Sources */,
+				C1BF3931285AF4480004D5BB /* GithubServiceMocks.swift in Sources */,
 				C125ADFA2859F96A00D6B604 /* RepositoryTests.swift in Sources */,
 				C1BF3916285A07510004D5BB /* OwnerTests.swift in Sources */,
 				C1BF392C285AEFAB0004D5BB /* GithubServiceTests.swift in Sources */,
+				C153BA63285C20EA005BF177 /* TrendingRepoViewControllerTests.swift in Sources */,
 				C153BA53285BF5A3005BF177 /* GithubEndpointTests.swift in Sources */,
 				C1BF391F285A0ED00004D5BB /* EndpointTests.swift in Sources */,
+				C153BA60285C1608005BF177 /* TrendingReposViewModelMocks.swift in Sources */,
 				C1BF391C285A0B3B0004D5BB /* TrendingReposResultTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,14 +539,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C15A45DF2859F5F400F97EAF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C15A45E02859F5F400F97EAF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C15A45E42859F5F500F97EAF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -625,7 +677,6 @@
 				INFOPLIST_FILE = GithubRepos/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -655,7 +706,6 @@
 				INFOPLIST_FILE = GithubRepos/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
