@@ -11,6 +11,14 @@ import Nimble
 
 class GithubServiceTests: XCTestCase {
 
+	func testGithubService_defaultInit() {
+		let sut = GithubService()
+
+		let config = sut.session.configuration
+
+		expect(config.requestCachePolicy).to(equal(.useProtocolCachePolicy))
+	}
+
 	func testGithubService_returns_successResponse() async throws {
 		let sut = GithubServiceSuccessfulMock()
 

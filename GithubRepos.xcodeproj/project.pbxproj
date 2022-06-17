@@ -150,12 +150,12 @@
 		C15A45D82859F5F400F97EAF /* GithubRepos */ = {
 			isa = PBXGroup;
 			children = (
-				C153BA4F285B58AA005BF177 /* Extensions */,
 				C15A45E72859F5F500F97EAF /* Info.plist */,
 				C15A45D92859F5F400F97EAF /* AppDelegate.swift */,
 				C15A45DB2859F5F400F97EAF /* SceneDelegate.swift */,
 				C1BF3920285A44D20004D5BB /* Networking */,
 				C125ADFB285A013E00D6B604 /* Models */,
+				C153BA4F285B58AA005BF177 /* Extensions */,
 				C15A46092859F69000F97EAF /* Resources */,
 			);
 			path = GithubRepos;
