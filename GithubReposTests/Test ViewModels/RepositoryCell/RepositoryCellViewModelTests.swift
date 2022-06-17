@@ -12,13 +12,13 @@ import Nimble
 class RepositoryCellViewModelTests: XCTestCase {
 
 	func testRepositoryCellViewModel_isExpanded() async {
-		let sut = RepositoryCellExpandedViewModelMock()
+		let sut = RepositoryCellExpandedViewModelStub()
 
 		expect(sut.isExpanded).to(beTrue())
 	}
 
 	func testRepositoryCellViewModel_isNotExpanded() async {
-		let sut = RepositoryCellCollapsedViewModelMock()
+		let sut = RepositoryCellCollapsedViewModelStub()
 
 		expect(sut.isExpanded).to(beFalse())
 	}

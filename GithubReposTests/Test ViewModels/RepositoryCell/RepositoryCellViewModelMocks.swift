@@ -8,7 +8,7 @@
 import Foundation
 @testable import GithubRepos
 
-struct RepositoryCellExpandedViewModelMock: RepositoryCellViewModelable {
+struct RepositoryCellExpandedViewModelStub: RepositoryCellViewModelable {
 	var isExpanded: Bool = expandedStub.isExpanded
 	var name: String = expandedStub.name
 	var ownerLogin: String = expandedStub.ownerLogin
@@ -18,7 +18,7 @@ struct RepositoryCellExpandedViewModelMock: RepositoryCellViewModelable {
 	var avatarUrl: URL = expandedStub.avatarUrl
 }
 
-struct RepositoryCellCollapsedViewModelMock: RepositoryCellViewModelable {
+struct RepositoryCellCollapsedViewModelStub: RepositoryCellViewModelable {
 	var isExpanded: Bool = collapsedStub.isExpanded
 	var name: String = collapsedStub.name
 	var ownerLogin: String = collapsedStub.ownerLogin
@@ -28,7 +28,7 @@ struct RepositoryCellCollapsedViewModelMock: RepositoryCellViewModelable {
 	var avatarUrl: URL = collapsedStub.avatarUrl
 }
 
-extension RepositoryCellExpandedViewModelMock {
+extension RepositoryCellExpandedViewModelStub {
 
 	static let expandedStub: RepositoryCellViewModel = {
 		var stub = RepositoryCellViewModel.stub
@@ -37,7 +37,7 @@ extension RepositoryCellExpandedViewModelMock {
 	}()
 }
 
-extension RepositoryCellCollapsedViewModelMock {
+extension RepositoryCellCollapsedViewModelStub {
 
 	static let collapsedStub: RepositoryCellViewModel = {
 		var stub = RepositoryCellViewModel.stub
