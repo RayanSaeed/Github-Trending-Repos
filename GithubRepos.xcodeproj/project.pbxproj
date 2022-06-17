@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		083709EC049E1725C03E95D1 /* Pods_GithubReposTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10EDEEEFBDB242E8A0F8D89D /* Pods_GithubReposTests.framework */; };
+		C1250E5B285CCF0F0039D4A2 /* lottie_badNetwork.json in Resources */ = {isa = PBXBuildFile; fileRef = C1250E5A285CCF0F0039D4A2 /* lottie_badNetwork.json */; };
 		C125ADF52859F80700D6B604 /* Mockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125ADF42859F80700D6B604 /* Mockable.swift */; };
 		C125ADFA2859F96A00D6B604 /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125ADF92859F96A00D6B604 /* RepositoryTests.swift */; };
 		C125ADFD285A015700D6B604 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125ADFC285A015700D6B604 /* Repository.swift */; };
@@ -65,6 +66,7 @@
 		5E4BEEBCF755D32D69AF01E8 /* Pods-GithubRepos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubRepos.debug.xcconfig"; path = "Target Support Files/Pods-GithubRepos/Pods-GithubRepos.debug.xcconfig"; sourceTree = "<group>"; };
 		7E0E8FC76750BCBAFA31595D /* Pods-GithubRepos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubRepos.release.xcconfig"; path = "Target Support Files/Pods-GithubRepos/Pods-GithubRepos.release.xcconfig"; sourceTree = "<group>"; };
 		83E61F1E56ABBF72BD9AC3A2 /* Pods_GithubRepos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubRepos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1250E5A285CCF0F0039D4A2 /* lottie_badNetwork.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottie_badNetwork.json; sourceTree = "<group>"; };
 		C125ADF42859F80700D6B604 /* Mockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mockable.swift; sourceTree = "<group>"; };
 		C125ADF92859F96A00D6B604 /* RepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
 		C125ADFC285A015700D6B604 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
@@ -134,6 +136,14 @@
 				10EDEEEFBDB242E8A0F8D89D /* Pods_GithubReposTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1250E5C285CCF160039D4A2 /* Lottie Files */ = {
+			isa = PBXGroup;
+			children = (
+				C1250E5A285CCF0F0039D4A2 /* lottie_badNetwork.json */,
+			);
+			path = "Lottie Files";
 			sourceTree = "<group>";
 		};
 		C125ADFB285A013E00D6B604 /* Models */ = {
@@ -296,6 +306,7 @@
 		C15A46092859F69000F97EAF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C1250E5C285CCF160039D4A2 /* Lottie Files */,
 				C15A45E22859F5F500F97EAF /* Assets.xcassets */,
 				C15A45E42859F5F500F97EAF /* LaunchScreen.storyboard */,
 			);
@@ -474,6 +485,7 @@
 			files = (
 				C15A45E62859F5F500F97EAF /* LaunchScreen.storyboard in Resources */,
 				C15A45E32859F5F500F97EAF /* Assets.xcassets in Resources */,
+				C1250E5B285CCF0F0039D4A2 /* lottie_badNetwork.json in Resources */,
 				C153BA5E285C06AA005BF177 /* TrendingReposViewController.xib in Resources */,
 				C153BA6F285C5182005BF177 /* RepositoryCell.xib in Resources */,
 			);
