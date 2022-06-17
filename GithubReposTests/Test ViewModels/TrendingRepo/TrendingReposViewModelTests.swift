@@ -15,7 +15,7 @@ class TrendingReposViewModelTests: XCTestCase {
 		let mockService = GithubServiceSuccessfulMock()
 		let sut = TrendingReposViewModel(service: mockService)
 
-		let result = await sut.fetchTrendingRepos()
+		let result = await sut.getTrendingReposListViewModels()
 
 		expect(result).to(equal(.stub))
 	}
@@ -24,7 +24,7 @@ class TrendingReposViewModelTests: XCTestCase {
 		let mockService = GithubServiceFailureMock()
 		let sut = TrendingReposViewModel(service: mockService)
 
-		let result = await sut.fetchTrendingRepos()
+		let result = await sut.getTrendingReposListViewModels()
 
 		expect(result).to(beNil())
 	}

@@ -27,7 +27,7 @@ protocol TrendingReposViewModelable {
 	/// until either the response's age expires, or the user explicitly asks to fetch data.
 	///
 	/// - Returns: An optional `TrendingReposResult`
-	func fetchTrendingRepos() async -> TrendingReposResult?
+	func getTrendingReposListViewModels() async -> TrendingReposResult?
 }
 
 struct TrendingReposViewModel: TrendingReposViewModelable {
@@ -39,7 +39,7 @@ struct TrendingReposViewModel: TrendingReposViewModelable {
 		self.service = service
 	}
 
-	func fetchTrendingRepos() async -> TrendingReposResult? {
+	func getTrendingReposListViewModels() async -> TrendingReposResult? {
 		let reposResult = await service.getTrendingRepos()
 
 		switch reposResult {
