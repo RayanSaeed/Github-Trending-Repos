@@ -1,0 +1,61 @@
+//
+//  TrendingReposDataSource.swift
+//  GithubRepos
+//
+//  Created by Rayan Saeed on 17/06/2022.
+//
+
+import Foundation
+import UIKit
+
+class TrendingReposListDataSource<ViewModel>: NSObject, UITableViewDataSource {
+
+	typealias CellConfigurator = (ViewModel, UITableViewCell) -> Void
+
+	var viewModels: [ViewModel]
+
+	private let reuseIdentifier: String
+	private let cellConfigurator: CellConfigurator
+
+	init(models: [ViewModel],
+		 reuseIdentifier: String,
+		 cellConfigurator: @escaping CellConfigurator) {
+		self.viewModels = models
+		self.reuseIdentifier = reuseIdentifier
+		self.cellConfigurator = cellConfigurator
+	}
+
+	// MARK: - UITableViewDataSource
+
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return viewModels.count
+	}
+
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let model = viewModels[indexPath.row]
+		let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
+
+		cellConfigurator(model, cell)
+
+		return cell
+	}
+}
+
+extension TrendingReposListDataSource where ViewModel == RepositoryCellViewModel {
+	static func make(for viewModels: [RepositoryCellViewModel],
+					 reuseIdentifier: String = "repositoryCell") -> TrendingReposListDataSource {
+		return TrendingReposListDataSource(
+			models: viewModels,
+			reuseIdentifier: reuseIdentifier
+		) { (viewModel, cell) in
+			guard let cell = cell as? RepositoryCell else {
+				fatalError("Could not unwrap a RepositoryCell for RepositoryCellViewModel")
+			}
+			cell.ownerNameLabel.text = viewModel.ownerLogin
+			cell.repositoryNameLabel.text = viewModel.name
+			cell.descriptionLabel.text = viewModel.description
+			cell.languageLabel.text = viewModel.language
+			cell.starsCountLabel.text = viewModel.starsCount
+		}
+	}
+}
