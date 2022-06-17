@@ -8,13 +8,13 @@
 import Foundation
 @testable import GithubRepos
 
-final class GithubServiceSuccessfulMock: Mockable, GithubServiceable {
+struct GithubServiceSuccessfulMock: GithubServiceable {
 	func getTrendingRepos() async -> Result<TrendingReposResult, APIError> {
 		return .success(.mock)
 	}
 }
 
-final class GithubServiceFailureMock: Mockable, GithubServiceable {
+struct GithubServiceFailureMock: GithubServiceable {
 	func getTrendingRepos() async -> Result<TrendingReposResult, APIError> {
 		return .failure(.noData)
 	}
