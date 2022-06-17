@@ -11,12 +11,12 @@ import Nimble
 
 class TrendingRepoDataSourceTests: XCTestCase {
 
-	private var sut: TrendingReposListDataSource<RepositoryCellViewModel>!
+	private var sut: TrendingReposListDataSource<RepositoryCellViewModelable>!
 	private let tableView = UITableView()
 	private let reuseIdentifier = "repositoryCell"
 
 	override func setUp() {
-		sut = .make(for: [.stub])
+		sut = .make(for: [RepositoryCellViewModel.stub])
 		tableView.register(
 			UINib(nibName: "RepositoryCell", bundle: nil),
 			forCellReuseIdentifier: reuseIdentifier
