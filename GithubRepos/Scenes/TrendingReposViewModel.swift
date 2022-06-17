@@ -8,14 +8,27 @@
 import Foundation
 
 protocol TrendingReposViewModelable {
+
+	/// An object conforming to the `GithubServiceable` protocol
 	var service: GithubServiceable { get }
 
+	/// Initializes the ViewModel with an object conforming to `GithubServiceable` protocol
+	///
+	/// - Parameter service:
+	/// 	Any object conforming to `GithubServiceable`. Default value: `GithubService()`
 	init(service: GithubServiceable)
+
+
+	/// Fetches the Trending Github repositories using the `service` injected into the
+	/// viewModel. The response is cached and shall not be fetched again from the network
+	/// until either the response's age expires, or the user explicitly asks to fetch data.
+	///
+	/// - Returns: An optional `TrendingReposResult`
 	func fetchTrendingRepos() async -> TrendingReposResult?
 }
 
 final class TrendingReposViewModel: ObservableObject, TrendingReposViewModelable {
-	let service: GithubServiceable
+	var service: GithubServiceable
 
 	init(service: GithubServiceable = GithubService()) {
 		self.service = service
