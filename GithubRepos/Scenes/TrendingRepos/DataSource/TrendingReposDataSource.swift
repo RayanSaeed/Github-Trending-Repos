@@ -42,6 +42,14 @@ class TrendingReposListDataSource<ViewModel>: NSObject, UITableViewDataSource {
 }
 
 extension TrendingReposListDataSource where ViewModel == RepositoryCellViewModel {
+	/// Convenience method for making a `TrendingReposListDataSource` object
+	/// - Parameters:
+	///   - viewModels: The viewModels to use for each cell
+	///   - reuseIdentifier: The reuseIdentifier for table view cells
+	///
+	/// - Returns:
+	/// A `TrendingReposListDataSource` object that has been configured with
+	/// the passed in viewModels and reuseIdentifer.
 	static func make(for viewModels: [RepositoryCellViewModel],
 					 reuseIdentifier: String = "repositoryCell") -> TrendingReposListDataSource {
 		return TrendingReposListDataSource(
