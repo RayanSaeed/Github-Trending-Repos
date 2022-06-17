@@ -26,8 +26,8 @@ protocol TrendingReposViewModelable {
 	/// viewModel. The response is cached and shall not be fetched again from the network
 	/// until either the response's age expires, or the user explicitly asks to fetch data.
 	///
-	/// - Returns: An optional `TrendingReposResult`
-	func getTrendingReposListViewModels() async -> TrendingReposResult?
+	/// - Returns: An optional array of viewModels i.e. `[RepositoryCellViewModelable]`
+	func getTrendingReposListViewModels() async -> [RepositoryCellViewModelable]?
 }
 
 struct TrendingReposViewModel: TrendingReposViewModelable {
@@ -39,12 +39,24 @@ struct TrendingReposViewModel: TrendingReposViewModelable {
 		self.service = service
 	}
 
-	func getTrendingReposListViewModels() async -> TrendingReposResult? {
+	func getTrendingReposListViewModels() async -> [RepositoryCellViewModelable]? {
 		let reposResult = await service.getTrendingRepos()
 
 		switch reposResult {
 			case .success(let result):
-				return result
+				let viewModels: [RepositoryCellViewModelable] = result.repos.map {
+					RepositoryCellViewModel(
+						name: $0.name,
+						ownerLogin: $0.owner.login,
+						description: $0.description ?? "",
+						language: $0.language ?? "",
+						starsCount: "\($0.starsCount)",
+						avatarUrl: URL(string: $0.owner.avatarUrl)!
+					)
+				}
+
+				return viewModels
+
 			case .failure(let error):
 				debugPrint(error)
 				return nil
