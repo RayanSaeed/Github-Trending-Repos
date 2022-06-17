@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol TrendingReposViewModelable: AnyObject {
+protocol TrendingReposViewModelable {
 
 	/// An object conforming to the `GithubServiceable` protocol
 	var service: GithubServiceable { get }
@@ -30,7 +30,7 @@ protocol TrendingReposViewModelable: AnyObject {
 	func fetchTrendingRepos() async -> TrendingReposResult?
 }
 
-final class TrendingReposViewModel: TrendingReposViewModelable {
+struct TrendingReposViewModel: TrendingReposViewModelable {
 
 	var service: GithubServiceable
 	var navigationBarTitle: String { "Trending" }
