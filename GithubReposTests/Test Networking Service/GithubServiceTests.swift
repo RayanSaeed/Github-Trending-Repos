@@ -26,7 +26,7 @@ class GithubServiceTests: XCTestCase {
 
 		switch result {
 			case .success(let response):
-				expect(response).to(equal(.mock))
+				expect(response).to(equal(.stub))
 			case .failure(let error):
 				fail("Expected to be a success but got a failure with \(error)")
 		}

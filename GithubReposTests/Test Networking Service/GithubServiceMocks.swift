@@ -10,7 +10,7 @@ import Foundation
 
 struct GithubServiceSuccessfulMock: GithubServiceable {
 	func getTrendingRepos() async -> Result<TrendingReposResult, APIError> {
-		return .success(.mock)
+		return .success(.stub)
 	}
 }
 
@@ -21,17 +21,17 @@ struct GithubServiceFailureMock: GithubServiceable {
 }
 
 extension TrendingReposResult {
-	static let mock: TrendingReposResult = {
-		.init(repos: [.mock])
+	static let stub: TrendingReposResult = {
+		.init(repos: [.stub])
 	}()
 }
 
 extension Repository {
-	static let mock: Repository = {
+	static let stub: Repository = {
 		.init(
 			id: 123,
 			name: "Repo Name",
-			owner: .mock,
+			owner: .stub,
 			description: "Repo Description",
 			language: "Repo Language",
 			starsCount: 456)
@@ -40,7 +40,7 @@ extension Repository {
 
 typealias Owner = Repository.Owner
 extension Owner {
-	static let mock: Owner = {
+	static let stub: Owner = {
 		.init(id: 789, login: "Owner Login", avatarUrl: "www.ownerAvatarUrl.com")
 	}()
 }
