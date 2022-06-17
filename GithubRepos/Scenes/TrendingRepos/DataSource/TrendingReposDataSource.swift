@@ -51,7 +51,7 @@ extension TrendingReposListDataSource where ViewModel == RepositoryCellViewModel
 	/// A `TrendingReposListDataSource` object that has been configured with
 	/// the passed in viewModels and reuseIdentifer.
 	static func make(for viewModels: [RepositoryCellViewModelable],
-					 reuseIdentifier: String = "repositoryCell") -> TrendingReposListDataSource {
+					 reuseIdentifier: String = RepositoryCell.reuseIdentifier) -> TrendingReposListDataSource {
 		return TrendingReposListDataSource(
 			models: viewModels,
 			reuseIdentifier: reuseIdentifier

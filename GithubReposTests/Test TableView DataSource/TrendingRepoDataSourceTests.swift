@@ -13,7 +13,7 @@ class TrendingRepoDataSourceTests: XCTestCase {
 
 	private var sut: TrendingReposListDataSource<RepositoryCellViewModelable>!
 	private let tableView = UITableView()
-	private let reuseIdentifier = "repositoryCell"
+	private let reuseIdentifier = RepositoryCell.reuseIdentifier
 
 	override func setUp() {
 		sut = .make(for: [RepositoryCellViewModel.stub])

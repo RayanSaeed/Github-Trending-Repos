@@ -9,6 +9,9 @@ import UIKit
 
 final class RepositoryCell: UITableViewCell {
 
+	// MARK: - Constants
+	static let reuseIdentifier = "repositoryCell"
+
 	// MARK: - IBOutlets
 	@IBOutlet weak var ownerNameLabel: UILabel!
 	@IBOutlet weak var repositoryNameLabel: UILabel!
