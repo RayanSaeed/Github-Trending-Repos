@@ -10,28 +10,32 @@ import Foundation
 
 final class TrendingReposViewModelSuccessfulMock: TrendingReposViewModelable {
 	var service: GithubServiceable
-
 	var navigationBarTitle: String { .mockTitle }
+
+	var fetchTrendingReposWasCalled = false
 
 	init(service: GithubServiceable = GithubServiceSuccessfulMock()) {
 		self.service = service
 	}
 
 	func fetchTrendingRepos() async -> TrendingReposResult? {
+		fetchTrendingReposWasCalled = true
 		return .mock
 	}
 }
 
 final class TrendingReposViewModelFailureMock: TrendingReposViewModelable {
 	var service: GithubServiceable
-
 	var navigationBarTitle: String { .mockTitle }
+
+	var fetchTrendingReposWasCalled = false
 
 	init(service: GithubServiceable = GithubServiceFailureMock()) {
 		self.service = service
 	}
 
 	func fetchTrendingRepos() async -> TrendingReposResult? {
+		fetchTrendingReposWasCalled = true
 		return nil
 	}
 }
