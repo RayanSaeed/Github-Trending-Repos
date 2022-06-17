@@ -48,12 +48,15 @@ extension RepositoryCellCollapsedViewModelStub {
 
 extension RepositoryCellViewModel {
 	static let stub: RepositoryCellViewModel = {
-		.init(
-			name: "Repo Name",
-			ownerLogin: "Owner Name",
-			description: "Repo Description",
-			language: "Repo Language",
-			starsCount: "123",
-			avatarUrl: URL(string: "https://avatars.githubusercontent.com/u/8598858?v=4")!)
+		let repo = Repository.stub
+		let owner = Owner.stub
+
+		return .init(
+			name: repo.name,
+			ownerLogin: owner.login,
+			description: repo.description!,
+			language: repo.language!,
+			starsCount: "\(repo.starsCount)",
+			avatarUrl: URL(string: "\(owner.avatarUrl)")!)
 	}()
 }

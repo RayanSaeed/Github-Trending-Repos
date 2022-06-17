@@ -15,9 +15,17 @@ class TrendingReposViewModelTests: XCTestCase {
 		let mockService = GithubServiceSuccessfulMock()
 		let sut = TrendingReposViewModel(service: mockService)
 
-		let result = await sut.getTrendingReposListViewModels()
+		let viewModels = await sut.getTrendingReposListViewModels()
+		let vm = viewModels?.first
+		let stub = RepositoryCellViewModel.stub
 
-		expect(result).to(equal(.stub))
+		expect(viewModels?.count).to(equal(1))
+		expect(vm?.name).to(equal(stub.name))
+		expect(vm?.ownerLogin).to(equal(stub.ownerLogin))
+		expect(vm?.description).to(equal(stub.description))
+		expect(vm?.language).to(equal(stub.language))
+		expect(vm?.starsCount).to(equal(stub.starsCount))
+		expect(vm?.avatarUrl).to(equal(stub.avatarUrl))
 	}
 
 	func testTrendingReposViewModel_fetchTrendingRepos_failure() async {
