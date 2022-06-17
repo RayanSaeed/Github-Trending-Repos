@@ -30,7 +30,6 @@ class GithubServiceTests: XCTestCase {
 			case .failure(let error):
 				fail("Expected to be a success but got a failure with \(error)")
 		}
-
 	}
 
 	func testGithubService_returns_failureResponse() async throws {
