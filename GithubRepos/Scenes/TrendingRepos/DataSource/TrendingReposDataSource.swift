@@ -52,10 +52,9 @@ extension TrendingReposListDataSource where ViewModel == RepositoryCellViewModel
 	/// the passed in viewModels and reuseIdentifer.
 	static func make(for viewModels: [RepositoryCellViewModelable],
 					 reuseIdentifier: String = RepositoryCell.reuseIdentifier) -> TrendingReposListDataSource {
-		return TrendingReposListDataSource(
-			models: viewModels,
-			reuseIdentifier: reuseIdentifier
-		) { (viewModel, cell) in
+
+		TrendingReposListDataSource(models: viewModels, reuseIdentifier: reuseIdentifier)
+		{ (viewModel, cell) in
 			guard let cell = cell as? RepositoryCell else {
 				fatalError("Could not unwrap a RepositoryCell for RepositoryCellViewModel")
 			}
