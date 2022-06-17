@@ -12,12 +12,14 @@ final class TrendingReposViewController: UIViewController {
 
 	// MARK: - Instance Properties
 	let viewModel: TrendingReposViewModelable
+	var dataSource: TrendingReposListDataSource<RepositoryCellViewModelable>?
 
 	// MARK: - Private Properties
 
 	// MARK: - Initializers
 	init(viewModel: TrendingReposViewModelable = TrendingReposViewModel()) {
 		self.viewModel = viewModel
+		self.dataSource = nil
 		super.init(nibName: "TrendingReposViewController", bundle: .main)
 	}
 
@@ -26,6 +28,7 @@ final class TrendingReposViewController: UIViewController {
 	}
 
 	// MARK: - IBOutlets
+	@IBOutlet weak var tableView: UITableView!
 
 	// MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -39,7 +42,12 @@ final class TrendingReposViewController: UIViewController {
 	// MARK: - Helper Methods
 	private func fetchTrendingRepos() {
 		Task {
-			_ = await viewModel.fetchTrendingRepos()
+			if let viewModels = await viewModel.getTrendingReposListViewModels() {
+				dataSource = .make(for: viewModels)
+			} else {
+				// Data could not be fetched from cache and service
+				dataSource = nil
+			}
 		}
 	}
 }

@@ -5,11 +5,13 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrendingReposViewController" customModule="GithubRepos" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="bWv-7L-sZm" id="nOp-Ld-B0T"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,10 +19,26 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bWv-7L-sZm">
+                    <rect key="frame" x="0.0" y="44" width="414" height="857"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-            <point key="canvasLocation" x="132" y="132"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bWv-7L-sZm" secondAttribute="trailing" id="ZWr-I7-NMJ"/>
+                <constraint firstItem="bWv-7L-sZm" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="mqe-Y0-5Ee"/>
+                <constraint firstItem="bWv-7L-sZm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qMo-dS-ceD"/>
+                <constraint firstItem="bWv-7L-sZm" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="39" id="zgs-BX-GRZ"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="131.91964285714286"/>
         </view>
-        <navigationItem title="Trending" largeTitleDisplayMode="never" id="eEn-XD-5Hl"/>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
