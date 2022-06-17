@@ -28,27 +28,31 @@ class TrendingRepoViewControllerTests: XCTestCase {
 
 		_ = await sut.view
 
-		expect(mockVM.fetchTrendingReposWasCalled).to(beTrue())
+		DispatchQueue.main.async {
+			expect(mockVM.fetchTrendingReposWasCalled).to(beTrue())
+		}
 	}
 
 	func testViewController_fetchData_fromViewModel_succeeds() async {
 		let mockService = GithubServiceSuccessfulMock()
 		let mockVM = TrendingReposViewModelSuccessfulMock(service: mockService)
 		let sut = await TrendingReposViewController(viewModel: mockVM)
+		let stub = RepositoryCellViewModel.stub
 
 		_ = await sut.view
 
-		let viewModels = await sut.dataSource?.viewModels
-		let vm = viewModels?.first
-		let stub = RepositoryCellViewModel.stub
+		let cell = await sut.tableView.cellForRow(at: .init(row: 0, section: 0)) as? RepositoryCell
+		let numberOfRows = await sut.tableView.numberOfRows(inSection: 0)
 
-		expect(viewModels?.count).to(equal(1))
-		expect(vm?.name).to(equal(stub.name))
-		expect(vm?.ownerLogin).to(equal(stub.ownerLogin))
-		expect(vm?.description).to(equal(stub.description))
-		expect(vm?.language).to(equal(stub.language))
-		expect(vm?.starsCount).to(equal(stub.starsCount))
-		expect(vm?.avatarUrl).to(equal(stub.avatarUrl))
+		expect(numberOfRows).to(equal(1))
+
+		DispatchQueue.main.async {
+			expect(cell?.repositoryNameLabel.text).to(equal(stub.name))
+			expect(cell?.ownerNameLabel.text).to(equal(stub.ownerLogin))
+			expect(cell?.descriptionLabel.text).to(equal(stub.description))
+			expect(cell?.languageLabel.text).to(equal(stub.language))
+			expect(cell?.starsCountLabel.text).to(equal(stub.starsCount))
+		}
 	}
 
 	func testViewController_fetchData_fromViewModel_fails() async {
@@ -58,8 +62,11 @@ class TrendingRepoViewControllerTests: XCTestCase {
 
 		_ = await sut.view
 
-		let viewModels = await sut.dataSource?.viewModels
+		let numberOfRows = await sut.tableView.numberOfRows(inSection: 0)
 
-		expect(viewModels).to(beNil())
+		DispatchQueue.main.async {
+			expect(numberOfRows).to(equal(0))
+			expect(mockVM.fetchTrendingReposWasCalled).to(beTrue())
+		}
 	}
 }

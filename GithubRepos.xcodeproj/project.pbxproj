@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		083709EC049E1725C03E95D1 /* Pods_GithubReposTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10EDEEEFBDB242E8A0F8D89D /* Pods_GithubReposTests.framework */; };
 		C1250E5B285CCF0F0039D4A2 /* lottie_badNetwork.json in Resources */ = {isa = PBXBuildFile; fileRef = C1250E5A285CCF0F0039D4A2 /* lottie_badNetwork.json */; };
+		C1250E5E285CDD240039D4A2 /* TrendingReposSkeletonDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1250E5D285CDD240039D4A2 /* TrendingReposSkeletonDataSource.swift */; };
 		C125ADF52859F80700D6B604 /* Mockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125ADF42859F80700D6B604 /* Mockable.swift */; };
 		C125ADFA2859F96A00D6B604 /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125ADF92859F96A00D6B604 /* RepositoryTests.swift */; };
 		C125ADFD285A015700D6B604 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125ADFC285A015700D6B604 /* Repository.swift */; };
@@ -67,6 +68,7 @@
 		7E0E8FC76750BCBAFA31595D /* Pods-GithubRepos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubRepos.release.xcconfig"; path = "Target Support Files/Pods-GithubRepos/Pods-GithubRepos.release.xcconfig"; sourceTree = "<group>"; };
 		83E61F1E56ABBF72BD9AC3A2 /* Pods_GithubRepos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubRepos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1250E5A285CCF0F0039D4A2 /* lottie_badNetwork.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottie_badNetwork.json; sourceTree = "<group>"; };
+		C1250E5D285CDD240039D4A2 /* TrendingReposSkeletonDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposSkeletonDataSource.swift; sourceTree = "<group>"; };
 		C125ADF42859F80700D6B604 /* Mockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mockable.swift; sourceTree = "<group>"; };
 		C125ADF92859F96A00D6B604 /* RepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
 		C125ADFC285A015700D6B604 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 		C153BA64285C4279005BF177 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				C1250E5D285CDD240039D4A2 /* TrendingReposSkeletonDataSource.swift */,
 				C153BA66285C49A8005BF177 /* TrendingReposDataSource.swift */,
 			);
 			path = DataSource;
@@ -596,6 +599,7 @@
 				C15A45DA2859F5F400F97EAF /* AppDelegate.swift in Sources */,
 				C1BF393B285AF5940004D5BB /* HTTPClient.swift in Sources */,
 				C15A45DC2859F5F400F97EAF /* SceneDelegate.swift in Sources */,
+				C1250E5E285CDD240039D4A2 /* TrendingReposSkeletonDataSource.swift in Sources */,
 				C153BA51285B58B9005BF177 /* URLSession+AsyncAwait.swift in Sources */,
 				C153BA5A285BFD75005BF177 /* TrendingReposViewModel.swift in Sources */,
 				C153BA6A285C4DA4005BF177 /* RepositoryCellViewModel.swift in Sources */,
