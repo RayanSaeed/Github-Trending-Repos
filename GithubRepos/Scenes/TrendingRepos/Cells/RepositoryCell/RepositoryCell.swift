@@ -21,5 +21,4 @@ final class RepositoryCell: UITableViewCell {
 	@IBOutlet weak var languageDotView: UIView!
 	@IBOutlet weak var avatarImageView: UIImageView!
 	@IBOutlet weak var detailsStackView: UIStackView!
-
 }
