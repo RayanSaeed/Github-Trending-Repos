@@ -26,6 +26,7 @@
 		C153BA73285C5B83005BF177 /* RepositoryCellViewModelMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153BA72285C5B83005BF177 /* RepositoryCellViewModelMocks.swift */; };
 		C153BA75285C5B93005BF177 /* RepositoryCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153BA74285C5B93005BF177 /* RepositoryCellViewModelTests.swift */; };
 		C153BA78285C6560005BF177 /* TrendingRepoDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153BA77285C6560005BF177 /* TrendingRepoDataSourceTests.swift */; };
+		C153BA7C285CBF75005BF177 /* UITableView+RegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153BA7B285CBF75005BF177 /* UITableView+RegisterCell.swift */; };
 		C15A45DA2859F5F400F97EAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A45D92859F5F400F97EAF /* AppDelegate.swift */; };
 		C15A45DC2859F5F400F97EAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A45DB2859F5F400F97EAF /* SceneDelegate.swift */; };
 		C15A45E32859F5F500F97EAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C15A45E22859F5F500F97EAF /* Assets.xcassets */; };
@@ -82,6 +83,7 @@
 		C153BA72285C5B83005BF177 /* RepositoryCellViewModelMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCellViewModelMocks.swift; sourceTree = "<group>"; };
 		C153BA74285C5B93005BF177 /* RepositoryCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCellViewModelTests.swift; sourceTree = "<group>"; };
 		C153BA77285C6560005BF177 /* TrendingRepoDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoDataSourceTests.swift; sourceTree = "<group>"; };
+		C153BA7B285CBF75005BF177 /* UITableView+RegisterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+RegisterCell.swift"; sourceTree = "<group>"; };
 		C15A45D62859F5F400F97EAF /* GithubRepos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubRepos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C15A45D92859F5F400F97EAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C15A45DB2859F5F400F97EAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				C153BA50285B58B9005BF177 /* URLSession+AsyncAwait.swift */,
+				C153BA7B285CBF75005BF177 /* UITableView+RegisterCell.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -571,6 +574,7 @@
 				C1BF3923285A44E50004D5BB /* Endpoint.swift in Sources */,
 				C125ADFD285A015700D6B604 /* Repository.swift in Sources */,
 				C153BA6E285C5182005BF177 /* RepositoryCell.swift in Sources */,
+				C153BA7C285CBF75005BF177 /* UITableView+RegisterCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
