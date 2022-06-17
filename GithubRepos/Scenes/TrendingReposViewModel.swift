@@ -7,10 +7,13 @@
 
 import Foundation
 
-protocol TrendingReposViewModelable {
+protocol TrendingReposViewModelable: AnyObject {
 
 	/// An object conforming to the `GithubServiceable` protocol
 	var service: GithubServiceable { get }
+
+	/// A string that is to be used as the NavigationVC's bar title.
+	var navigationBarTitle: String { get }
 
 	/// Initializes the ViewModel with an object conforming to `GithubServiceable` protocol
 	///
@@ -28,7 +31,9 @@ protocol TrendingReposViewModelable {
 }
 
 final class TrendingReposViewModel: ObservableObject, TrendingReposViewModelable {
+
 	var service: GithubServiceable
+	var navigationBarTitle: String { "Trending" }
 
 	init(service: GithubServiceable = GithubService()) {
 		self.service = service

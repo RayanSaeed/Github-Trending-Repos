@@ -28,4 +28,12 @@ class TrendingReposViewModelTests: XCTestCase {
 
 		expect(result).to(beNil())
 	}
+
+	func testTrendingViewModel_title() {
+		let sut = TrendingReposViewModelSuccessfulMock()
+
+		let title = sut.navigationBarTitle
+
+		expect(title).to(equal(.mockTitle))
+	}
 }
