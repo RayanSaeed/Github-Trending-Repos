@@ -11,7 +11,8 @@ target 'GithubRepos' do
 		inherit! :search_paths
 		# Pods for testing
 		pod 'Nimble'
-		
+		pod 'lottie-ios'
+		pod 'SkeletonView'
 	end
 
 end

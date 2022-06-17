@@ -1,16 +1,24 @@
 PODS:
+  - lottie-ios (3.3.0)
   - Nimble (9.2.1)
+  - SkeletonView (1.29.2)
 
 DEPENDENCIES:
+  - lottie-ios
   - Nimble
+  - SkeletonView
 
 SPEC REPOS:
   trunk:
+    - lottie-ios
     - Nimble
+    - SkeletonView
 
 SPEC CHECKSUMS:
+  lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
   Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
+  SkeletonView: 915a80ecc2b6421ab7ac0f0212321c0cc1406472
 
-PODFILE CHECKSUM: 62e97dc74b5bda32f1bb819b7593d80250cf186d
+PODFILE CHECKSUM: 164e723bbc56f5451e18be3929be88b747489d1c
 
 COCOAPODS: 1.11.3
