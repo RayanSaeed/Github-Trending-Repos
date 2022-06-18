@@ -1,5 +1,5 @@
 //
-//  TrendingRepoDataSourceTests.swift
+//  TrendingReposListDataSourceTests.swift
 //  GithubReposTests
 //
 //  Created by Rayan Saeed on 17/06/2022.
@@ -9,7 +9,7 @@ import XCTest
 import Nimble
 @testable import GithubRepos
 
-class TrendingRepoDataSourceTests: XCTestCase {
+class TrendingReposListDataSourceTests: XCTestCase {
 
 	private var sut: TrendingReposListDataSource<RepositoryCellViewModelable>!
 	private let tableView = UITableView()
