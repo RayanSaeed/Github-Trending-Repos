@@ -21,17 +21,16 @@ class TrendingReposListDataSourceTests: XCTestCase {
 			UINib(nibName: "RepositoryCell", bundle: nil),
 			forCellReuseIdentifier: reuseIdentifier
 		)
+		tableView.dataSource = sut
 	}
 
 	func testTrendingReposListDataSource_numberOfRows_inSectionZero() {
-		tableView.dataSource = sut
 		let numberOfRows = sut.tableView(tableView, numberOfRowsInSection: 0)
 
 		expect(numberOfRows).to(equal(1))
 	}
 
 	func testTrendingReposListDataSource_cellIdentifier() {
-		tableView.dataSource = sut
 		let cell = sut.tableView(tableView, cellForRowAt: .init(row: 0, section: 0))
 
 		expect(cell.reuseIdentifier).to(equal(reuseIdentifier))
