@@ -48,8 +48,8 @@ struct TrendingReposViewModel: TrendingReposViewModelable {
 					RepositoryCellViewModel(
 						name: $0.name,
 						ownerLogin: $0.owner.login,
-						description: $0.description ?? "",
-						language: $0.language ?? "",
+						description: $0.description ?? "No description",
+						language: $0.language ?? "N/A",
 						starsCount: "\($0.starsCount)",
 						avatarUrl: URL(string: $0.owner.avatarUrl)!
 					)
