@@ -1,5 +1,5 @@
 //
-//  TrendingReposDataSource.swift
+//  TrendingReposListDataSource.swift
 //  GithubRepos
 //
 //  Created by Rayan Saeed on 17/06/2022.
@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 class TrendingReposListDataSource<ViewModel>: NSObject, UITableViewDataSource {
 
@@ -63,6 +64,11 @@ extension TrendingReposListDataSource where ViewModel == RepositoryCellViewModel
 			cell.descriptionLabel.text = viewModel.description
 			cell.languageLabel.text = viewModel.language
 			cell.starsCountLabel.text = viewModel.starsCount
+
+			cell.avatarImageView.kf.setImage(with: viewModel.avatarUrl)
+
+			cell.descriptionLabel.isHidden = !viewModel.isExpanded
+			cell.detailsStackView.isHidden = !viewModel.isExpanded
 		}
 	}
 }
