@@ -10,8 +10,10 @@ import SkeletonView
 
 final class TrendingReposViewController: UIViewController {
 
-	// MARK: - Instance Properties
+	// MARK: - Private Properties
 	private let viewModel: TrendingReposViewModelable
+	private let refreshControl = UIRefreshControl()
+
 	private let skeletonDataSource = TrendingReposSkeletonDataSource()
 	private var dataSource: UITableViewDataSource? {
 		didSet {
@@ -20,7 +22,10 @@ final class TrendingReposViewController: UIViewController {
 			if dataSource == nil {
 				// show the lottie retry animation view
 			}
-			if !(dataSource is SkeletonTableViewDataSource) { hideSkeletons() }
+			if !(dataSource is SkeletonTableViewDataSource) {
+				refreshControl.endRefreshing()
+				hideSkeletons()
+			}
 		}
 	}
 
@@ -50,14 +55,17 @@ final class TrendingReposViewController: UIViewController {
 	// MARK: - Helper Methods
 	private func setupTableView() {
 		tableView.delegate = self
+		tableView.refreshControl = refreshControl
 		tableView.registerCell(type: RepositoryCell.self, identifier: RepositoryCell.reuseIdentifier)
 
 		// Initialy dataSource is assigned to a SkeletonDataSource, until
 		// data is fetched from the viewModel
 		dataSource = skeletonDataSource
+
+		refreshControl.addTarget(self, action: #selector(tableViewWasPulledToRefresh), for: .valueChanged)
 	}
 
-	private func fetchTrendingRepos() {
+	private func fetchTrendingRepos(userInitiated: Bool = false) {
 		Task {
 			if let viewModels = await viewModel.getTrendingReposListViewModels() {
 				// We also need to keep a strong reference to the data source,
@@ -67,6 +75,15 @@ final class TrendingReposViewController: UIViewController {
 				// Data could not be fetched from cache and service
 				dataSource = nil
 			}
+		}
+	}
+
+	@objc private func tableViewWasPulledToRefresh() {
+		dataSource = skeletonDataSource
+		// We are adding a delay here intentionally, for better UX
+		// and so that the user doesn't bombard the server with too many refresh requests
+		DispatchQueue.global().asyncAfter(deadline: .now() + 1.5) { [weak self] in
+			self?.fetchTrendingRepos(userInitiated: true)
 		}
 	}
 }
