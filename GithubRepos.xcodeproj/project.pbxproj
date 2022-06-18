@@ -21,7 +21,7 @@
 		C153BA5E285C06AA005BF177 /* TrendingReposViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C153BA5C285C06AA005BF177 /* TrendingReposViewController.xib */; };
 		C153BA60285C1608005BF177 /* TrendingReposViewModelMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153BA5F285C1608005BF177 /* TrendingReposViewModelMocks.swift */; };
 		C153BA63285C20EA005BF177 /* TrendingRepoViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153BA62285C20EA005BF177 /* TrendingRepoViewControllerTests.swift */; };
-		C153BA67285C49A8005BF177 /* TrendingReposDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153BA66285C49A8005BF177 /* TrendingReposDataSource.swift */; };
+		C153BA67285C49A8005BF177 /* TrendingReposListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153BA66285C49A8005BF177 /* TrendingReposListDataSource.swift */; };
 		C153BA6A285C4DA4005BF177 /* RepositoryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153BA69285C4DA3005BF177 /* RepositoryCellViewModel.swift */; };
 		C153BA6E285C5182005BF177 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153BA6C285C5182005BF177 /* RepositoryCell.swift */; };
 		C153BA6F285C5182005BF177 /* RepositoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C153BA6D285C5182005BF177 /* RepositoryCell.xib */; };
@@ -80,7 +80,7 @@
 		C153BA5C285C06AA005BF177 /* TrendingReposViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendingReposViewController.xib; sourceTree = "<group>"; };
 		C153BA5F285C1608005BF177 /* TrendingReposViewModelMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposViewModelMocks.swift; sourceTree = "<group>"; };
 		C153BA62285C20EA005BF177 /* TrendingRepoViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoViewControllerTests.swift; sourceTree = "<group>"; };
-		C153BA66285C49A8005BF177 /* TrendingReposDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposDataSource.swift; sourceTree = "<group>"; };
+		C153BA66285C49A8005BF177 /* TrendingReposListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposListDataSource.swift; sourceTree = "<group>"; };
 		C153BA69285C4DA3005BF177 /* RepositoryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCellViewModel.swift; sourceTree = "<group>"; };
 		C153BA6C285C5182005BF177 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 		C153BA6D285C5182005BF177 /* RepositoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryCell.xib; sourceTree = "<group>"; };
@@ -195,7 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				C1250E5D285CDD240039D4A2 /* TrendingReposSkeletonDataSource.swift */,
-				C153BA66285C49A8005BF177 /* TrendingReposDataSource.swift */,
+				C153BA66285C49A8005BF177 /* TrendingReposListDataSource.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -594,7 +594,7 @@
 				C1BF391A285A0B100004D5BB /* TrendingReposResult.swift in Sources */,
 				C1BF3935285AF5220004D5BB /* GithubService.swift in Sources */,
 				C1BF3939285AF5810004D5BB /* APIError.swift in Sources */,
-				C153BA67285C49A8005BF177 /* TrendingReposDataSource.swift in Sources */,
+				C153BA67285C49A8005BF177 /* TrendingReposListDataSource.swift in Sources */,
 				C1BF3925285A46E30004D5BB /* HTTPMethod.swift in Sources */,
 				C15A45DA2859F5F400F97EAF /* AppDelegate.swift in Sources */,
 				C1BF393B285AF5940004D5BB /* HTTPClient.swift in Sources */,
