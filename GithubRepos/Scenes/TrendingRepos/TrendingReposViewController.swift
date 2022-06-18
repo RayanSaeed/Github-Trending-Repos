@@ -82,7 +82,7 @@ final class TrendingReposViewController: UIViewController {
 		dataSource = skeletonDataSource
 		// We are adding a delay here intentionally, for better UX
 		// and so that the user doesn't bombard the server with too many refresh requests
-		DispatchQueue.global().asyncAfter(deadline: .now() + 1.5) { [weak self] in
+		DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in
 			self?.fetchTrendingRepos(userInitiated: true)
 		}
 	}

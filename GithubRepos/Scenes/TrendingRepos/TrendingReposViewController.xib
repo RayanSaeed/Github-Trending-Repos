@@ -21,10 +21,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eA3-NP-DJ1" userLabel="Content View">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <subviews>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bWv-7L-sZm">
-                            <rect key="frame" x="0.0" y="52" width="414" height="824"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="832"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
@@ -33,7 +33,7 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="bWv-7L-sZm" firstAttribute="top" secondItem="eA3-NP-DJ1" secondAttribute="top" constant="52" id="IMy-yO-aED"/>
+                        <constraint firstItem="bWv-7L-sZm" firstAttribute="top" secondItem="eA3-NP-DJ1" secondAttribute="top" id="IMy-yO-aED"/>
                         <constraint firstAttribute="trailing" secondItem="bWv-7L-sZm" secondAttribute="trailing" id="jCa-kH-790"/>
                         <constraint firstAttribute="bottom" secondItem="bWv-7L-sZm" secondAttribute="bottom" constant="20" symbolic="YES" id="kib-AA-0o2"/>
                         <constraint firstItem="bWv-7L-sZm" firstAttribute="leading" secondItem="eA3-NP-DJ1" secondAttribute="leading" id="yy0-ry-bbN"/>
@@ -44,11 +44,11 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="eA3-NP-DJ1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4XU-sW-I6h"/>
                 <constraint firstItem="eA3-NP-DJ1" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="34" id="9DV-pS-SYa"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="eA3-NP-DJ1" secondAttribute="top" constant="44" id="YnL-B8-eUX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="eA3-NP-DJ1" secondAttribute="top" id="YnL-B8-eUX"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eA3-NP-DJ1" secondAttribute="trailing" id="coX-Av-BCL"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="131.91964285714286"/>
