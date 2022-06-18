@@ -23,21 +23,21 @@ class TrendingReposListDataSourceTests: XCTestCase {
 		)
 	}
 
-	func testTrendingRepoDataSource_numberOfRows_inSectionZero() {
+	func testTrendingReposListDataSource_numberOfRows_inSectionZero() {
 		tableView.dataSource = sut
 		let numberOfRows = sut.tableView(tableView, numberOfRowsInSection: 0)
 
 		expect(numberOfRows).to(equal(1))
 	}
 
-	func testTrendingRepoDataSource_cellIdentifier() {
+	func testTrendingReposListDataSource_cellIdentifier() {
 		tableView.dataSource = sut
 		let cell = sut.tableView(tableView, cellForRowAt: .init(row: 0, section: 0))
 
 		expect(cell.reuseIdentifier).to(equal(reuseIdentifier))
 	}
 
-	func testTrendingRepoDataSource_cellConfigurator_dataBinding() throws {
+	func testTrendingReposListDataSource_cellConfigurator_dataBinding() throws {
 		let repoStub = RepositoryCellViewModel.stub
 		tableView.dataSource = sut
 		let cell = try XCTUnwrap(sut.tableView(tableView, cellForRowAt: .init(row: 0, section: 0)) as? RepositoryCell)
