@@ -19,10 +19,8 @@ final class TrendingReposViewController: UIViewController {
 			tableView.reloadData()
 			if dataSource == nil {
 				// show the lottie retry animation view
-				
-			} else if dataSource is TrendingReposListDataSource<RepositoryCellViewModelable> {
-				hideSkeletons()
 			}
+			if !(dataSource is SkeletonTableViewDataSource) { hideSkeletons() }
 		}
 	}
 
@@ -45,24 +43,18 @@ final class TrendingReposViewController: UIViewController {
 		self.title = viewModel.navigationBarTitle
 
 		setupTableView()
-		setupSkeletonView()
-		fetchTrendingRepos()
 		showSkeletons()
+		fetchTrendingRepos()
     }
 
 	// MARK: - Helper Methods
 	private func setupTableView() {
+		tableView.delegate = self
 		tableView.registerCell(type: RepositoryCell.self, identifier: RepositoryCell.reuseIdentifier)
-
-		// When using resizable cells, it's mandatory to define the estimatedRowHeight for SkeletonView to work
-		tableView.estimatedRowHeight = 100
 
 		// Initialy dataSource is assigned to a SkeletonDataSource, until
 		// data is fetched from the viewModel
 		dataSource = skeletonDataSource
-
-		tableView.delegate = self
-		tableView.dataSource = dataSource
 	}
 
 	private func fetchTrendingRepos() {
@@ -91,17 +83,12 @@ extension TrendingReposViewController: UITableViewDelegate {
 
 extension TrendingReposViewController {
 	// MARK: - Skeleton View Helper Methods
-	private func setupSkeletonView() {
-		SkeletonAppearance.default.multilineLastLineFillPercent = Int.random(in: 70...90)
-		SkeletonAppearance.default.multilineCornerRadius = 8
-	}
-
 	private func showSkeletons() {
 		view.showAnimatedGradientSkeleton()
 	}
 
 	private func hideSkeletons() {
 		view.stopSkeletonAnimation()
-		view.hideSkeleton()
+		view.hideSkeleton(transition: .crossDissolve(0.25))
 	}
 }
