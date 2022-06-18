@@ -11,7 +11,7 @@ import Nimble
 
 class TrendingReposResultTests: XCTestCase, Mockable {
 
-	var sut: TrendingReposResult!
+	private var sut: TrendingReposResult!
 
 	override func setUp() {
 		super.setUp()
