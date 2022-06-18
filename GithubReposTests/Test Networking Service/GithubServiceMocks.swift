@@ -9,13 +9,13 @@ import Foundation
 @testable import GithubRepos
 
 struct GithubServiceSuccessfulMock: GithubServiceable {
-	func getTrendingRepos() async -> Result<TrendingReposResult, APIError> {
+	func getTrendingRepos() -> Result<TrendingReposResult, APIError> {
 		return .success(.stub)
 	}
 }
 
 struct GithubServiceFailureMock: GithubServiceable {
-	func getTrendingRepos() async -> Result<TrendingReposResult, APIError> {
+	func getTrendingRepos() -> Result<TrendingReposResult, APIError> {
 		return .failure(.noData)
 	}
 }
