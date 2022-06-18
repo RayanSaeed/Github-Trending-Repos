@@ -10,6 +10,7 @@
 		083709EC049E1725C03E95D1 /* Pods_GithubReposTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10EDEEEFBDB242E8A0F8D89D /* Pods_GithubReposTests.framework */; };
 		C1250E5B285CCF0F0039D4A2 /* lottie_badNetwork.json in Resources */ = {isa = PBXBuildFile; fileRef = C1250E5A285CCF0F0039D4A2 /* lottie_badNetwork.json */; };
 		C1250E5E285CDD240039D4A2 /* TrendingReposSkeletonDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1250E5D285CDD240039D4A2 /* TrendingReposSkeletonDataSource.swift */; };
+		C1250E63285E05EF0039D4A2 /* TrendingReposSkeletonDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1250E62285E05EF0039D4A2 /* TrendingReposSkeletonDataSourceTests.swift */; };
 		C125ADF52859F80700D6B604 /* Mockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125ADF42859F80700D6B604 /* Mockable.swift */; };
 		C125ADFA2859F96A00D6B604 /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125ADF92859F96A00D6B604 /* RepositoryTests.swift */; };
 		C125ADFD285A015700D6B604 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125ADFC285A015700D6B604 /* Repository.swift */; };
@@ -27,7 +28,7 @@
 		C153BA6F285C5182005BF177 /* RepositoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C153BA6D285C5182005BF177 /* RepositoryCell.xib */; };
 		C153BA73285C5B83005BF177 /* RepositoryCellViewModelMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153BA72285C5B83005BF177 /* RepositoryCellViewModelMocks.swift */; };
 		C153BA75285C5B93005BF177 /* RepositoryCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153BA74285C5B93005BF177 /* RepositoryCellViewModelTests.swift */; };
-		C153BA78285C6560005BF177 /* TrendingRepoDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153BA77285C6560005BF177 /* TrendingRepoDataSourceTests.swift */; };
+		C153BA78285C6560005BF177 /* TrendingReposListDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153BA77285C6560005BF177 /* TrendingReposListDataSourceTests.swift */; };
 		C153BA7C285CBF75005BF177 /* UITableView+RegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153BA7B285CBF75005BF177 /* UITableView+RegisterCell.swift */; };
 		C15A45DA2859F5F400F97EAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A45D92859F5F400F97EAF /* AppDelegate.swift */; };
 		C15A45DC2859F5F400F97EAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A45DB2859F5F400F97EAF /* SceneDelegate.swift */; };
@@ -69,6 +70,7 @@
 		83E61F1E56ABBF72BD9AC3A2 /* Pods_GithubRepos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubRepos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1250E5A285CCF0F0039D4A2 /* lottie_badNetwork.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottie_badNetwork.json; sourceTree = "<group>"; };
 		C1250E5D285CDD240039D4A2 /* TrendingReposSkeletonDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposSkeletonDataSource.swift; sourceTree = "<group>"; };
+		C1250E62285E05EF0039D4A2 /* TrendingReposSkeletonDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposSkeletonDataSourceTests.swift; sourceTree = "<group>"; };
 		C125ADF42859F80700D6B604 /* Mockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mockable.swift; sourceTree = "<group>"; };
 		C125ADF92859F96A00D6B604 /* RepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
 		C125ADFC285A015700D6B604 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
@@ -86,7 +88,7 @@
 		C153BA6D285C5182005BF177 /* RepositoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryCell.xib; sourceTree = "<group>"; };
 		C153BA72285C5B83005BF177 /* RepositoryCellViewModelMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCellViewModelMocks.swift; sourceTree = "<group>"; };
 		C153BA74285C5B93005BF177 /* RepositoryCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCellViewModelTests.swift; sourceTree = "<group>"; };
-		C153BA77285C6560005BF177 /* TrendingRepoDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoDataSourceTests.swift; sourceTree = "<group>"; };
+		C153BA77285C6560005BF177 /* TrendingReposListDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposListDataSourceTests.swift; sourceTree = "<group>"; };
 		C153BA7B285CBF75005BF177 /* UITableView+RegisterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+RegisterCell.swift"; sourceTree = "<group>"; };
 		C15A45D62859F5F400F97EAF /* GithubRepos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubRepos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C15A45D92859F5F400F97EAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -251,7 +253,8 @@
 		C153BA76285C649F005BF177 /* Test TableView DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				C153BA77285C6560005BF177 /* TrendingRepoDataSourceTests.swift */,
+				C153BA77285C6560005BF177 /* TrendingReposListDataSourceTests.swift */,
+				C1250E62285E05EF0039D4A2 /* TrendingReposSkeletonDataSourceTests.swift */,
 			);
 			path = "Test TableView DataSource";
 			sourceTree = "<group>";
@@ -628,9 +631,10 @@
 				C153BA63285C20EA005BF177 /* TrendingRepoViewControllerTests.swift in Sources */,
 				C153BA53285BF5A3005BF177 /* GithubEndpointTests.swift in Sources */,
 				C1BF391F285A0ED00004D5BB /* EndpointTests.swift in Sources */,
+				C1250E63285E05EF0039D4A2 /* TrendingReposSkeletonDataSourceTests.swift in Sources */,
 				C153BA60285C1608005BF177 /* TrendingReposViewModelMocks.swift in Sources */,
 				C1BF391C285A0B3B0004D5BB /* TrendingReposResultTests.swift in Sources */,
-				C153BA78285C6560005BF177 /* TrendingRepoDataSourceTests.swift in Sources */,
+				C153BA78285C6560005BF177 /* TrendingReposListDataSourceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

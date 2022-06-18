@@ -22,7 +22,7 @@ class GithubServiceTests: XCTestCase {
 	func testGithubService_returns_successResponse() async throws {
 		let sut = GithubServiceSuccessfulMock()
 
-		let result = await sut.getTrendingRepos()
+		let result = sut.getTrendingRepos()
 
 		switch result {
 			case .success(let response):
@@ -35,7 +35,7 @@ class GithubServiceTests: XCTestCase {
 	func testGithubService_returns_failureResponse() async throws {
 		let sut = GithubServiceFailureMock()
 
-		let result = await sut.getTrendingRepos()
+		let result = sut.getTrendingRepos()
 
 		switch result {
 			case .success(let response):
