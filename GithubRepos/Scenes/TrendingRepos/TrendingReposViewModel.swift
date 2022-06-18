@@ -44,22 +44,26 @@ struct TrendingReposViewModel: TrendingReposViewModelable {
 
 		switch reposResult {
 			case .success(let result):
-				let viewModels: [RepositoryCellViewModelable] = result.repos.map {
-					RepositoryCellViewModel(
-						name: $0.name,
-						ownerLogin: $0.owner.login,
-						description: $0.description ?? "No description",
-						language: $0.language ?? "N/A",
-						starsCount: "\($0.starsCount)",
-						avatarUrl: URL(string: $0.owner.avatarUrl)!
-					)
-				}
-
+				let viewModels: [RepositoryCellViewModelable] = mapModelsToViewModels(models: result.repos)
 				return viewModels
 
 			case .failure(let error):
 				debugPrint(error)
 				return nil
+		}
+	}
+
+	// MARK: - Private methods
+	private func mapModelsToViewModels(models: [Repository]) -> [RepositoryCellViewModelable] {
+		models.map {
+			RepositoryCellViewModel(
+				name: $0.name,
+				ownerLogin: $0.owner.login,
+				description: $0.description ?? "No description",
+				language: $0.language ?? "N/A",
+				starsCount: "\($0.starsCount)",
+				avatarUrl: URL(string: $0.owner.avatarUrl)!
+			)
 		}
 	}
 }
