@@ -11,6 +11,9 @@
 		C1250E5B285CCF0F0039D4A2 /* lottie_badNetwork.json in Resources */ = {isa = PBXBuildFile; fileRef = C1250E5A285CCF0F0039D4A2 /* lottie_badNetwork.json */; };
 		C1250E5E285CDD240039D4A2 /* TrendingReposSkeletonDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1250E5D285CDD240039D4A2 /* TrendingReposSkeletonDataSource.swift */; };
 		C1250E63285E05EF0039D4A2 /* TrendingReposSkeletonDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1250E62285E05EF0039D4A2 /* TrendingReposSkeletonDataSourceTests.swift */; };
+		C1250E66285EE5FB0039D4A2 /* NetworkErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1250E65285EE5FB0039D4A2 /* NetworkErrorView.swift */; };
+		C1250E68285EE6850039D4A2 /* NetworkErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1250E67285EE6850039D4A2 /* NetworkErrorView.xib */; };
+		C1250E6A285EF3B30039D4A2 /* UIView+LoadFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1250E69285EF3B30039D4A2 /* UIView+LoadFromNib.swift */; };
 		C125ADF52859F80700D6B604 /* Mockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125ADF42859F80700D6B604 /* Mockable.swift */; };
 		C125ADFA2859F96A00D6B604 /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125ADF92859F96A00D6B604 /* RepositoryTests.swift */; };
 		C125ADFD285A015700D6B604 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125ADFC285A015700D6B604 /* Repository.swift */; };
@@ -71,6 +74,9 @@
 		C1250E5A285CCF0F0039D4A2 /* lottie_badNetwork.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lottie_badNetwork.json; sourceTree = "<group>"; };
 		C1250E5D285CDD240039D4A2 /* TrendingReposSkeletonDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposSkeletonDataSource.swift; sourceTree = "<group>"; };
 		C1250E62285E05EF0039D4A2 /* TrendingReposSkeletonDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposSkeletonDataSourceTests.swift; sourceTree = "<group>"; };
+		C1250E65285EE5FB0039D4A2 /* NetworkErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorView.swift; sourceTree = "<group>"; };
+		C1250E67285EE6850039D4A2 /* NetworkErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NetworkErrorView.xib; sourceTree = "<group>"; };
+		C1250E69285EF3B30039D4A2 /* UIView+LoadFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LoadFromNib.swift"; sourceTree = "<group>"; };
 		C125ADF42859F80700D6B604 /* Mockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mockable.swift; sourceTree = "<group>"; };
 		C125ADF92859F96A00D6B604 /* RepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
 		C125ADFC285A015700D6B604 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
@@ -150,6 +156,15 @@
 			path = "Lottie Files";
 			sourceTree = "<group>";
 		};
+		C1250E64285EE5250039D4A2 /* NetworkError-Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				C1250E65285EE5FB0039D4A2 /* NetworkErrorView.swift */,
+				C1250E67285EE6850039D4A2 /* NetworkErrorView.xib */,
+			);
+			path = "NetworkError-Lottie";
+			sourceTree = "<group>";
+		};
 		C125ADFB285A013E00D6B604 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +177,7 @@
 		C153BA4F285B58AA005BF177 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C1250E69285EF3B30039D4A2 /* UIView+LoadFromNib.swift */,
 				C153BA50285B58B9005BF177 /* URLSession+AsyncAwait.swift */,
 				C153BA7B285CBF75005BF177 /* UITableView+RegisterCell.swift */,
 			);
@@ -210,6 +226,7 @@
 				C153BA5C285C06AA005BF177 /* TrendingReposViewController.xib */,
 				C153BA64285C4279005BF177 /* DataSource */,
 				C153BA68285C4D94005BF177 /* Cells */,
+				C1250E64285EE5250039D4A2 /* NetworkError-Lottie */,
 			);
 			path = TrendingRepos;
 			sourceTree = "<group>";
@@ -492,6 +509,7 @@
 			files = (
 				C15A45E62859F5F500F97EAF /* LaunchScreen.storyboard in Resources */,
 				C15A45E32859F5F500F97EAF /* Assets.xcassets in Resources */,
+				C1250E68285EE6850039D4A2 /* NetworkErrorView.xib in Resources */,
 				C1250E5B285CCF0F0039D4A2 /* lottie_badNetwork.json in Resources */,
 				C153BA5E285C06AA005BF177 /* TrendingReposViewController.xib in Resources */,
 				C153BA6F285C5182005BF177 /* RepositoryCell.xib in Resources */,
@@ -602,6 +620,7 @@
 				C15A45DA2859F5F400F97EAF /* AppDelegate.swift in Sources */,
 				C1BF393B285AF5940004D5BB /* HTTPClient.swift in Sources */,
 				C15A45DC2859F5F400F97EAF /* SceneDelegate.swift in Sources */,
+				C1250E6A285EF3B30039D4A2 /* UIView+LoadFromNib.swift in Sources */,
 				C1250E5E285CDD240039D4A2 /* TrendingReposSkeletonDataSource.swift in Sources */,
 				C153BA51285B58B9005BF177 /* URLSession+AsyncAwait.swift in Sources */,
 				C153BA5A285BFD75005BF177 /* TrendingReposViewModel.swift in Sources */,
@@ -611,6 +630,7 @@
 				C1BF3923285A44E50004D5BB /* Endpoint.swift in Sources */,
 				C125ADFD285A015700D6B604 /* Repository.swift in Sources */,
 				C153BA6E285C5182005BF177 /* RepositoryCell.swift in Sources */,
+				C1250E66285EE5FB0039D4A2 /* NetworkErrorView.swift in Sources */,
 				C153BA7C285CBF75005BF177 /* UITableView+RegisterCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

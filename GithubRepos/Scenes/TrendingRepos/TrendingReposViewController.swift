@@ -13,6 +13,7 @@ final class TrendingReposViewController: UIViewController {
 	// MARK: - Private Properties
 	private let viewModel: TrendingReposViewModelable
 	private let refreshControl = UIRefreshControl()
+	private var networkErrorView: NetworkErrorView?
 
 	private let skeletonDataSource = TrendingReposSkeletonDataSource()
 	private var dataSource: UITableViewDataSource? {
@@ -20,7 +21,8 @@ final class TrendingReposViewController: UIViewController {
 			tableView.dataSource = dataSource
 			tableView.reloadData()
 			if dataSource == nil {
-				// show the lottie retry animation view
+				// Show the lottie NetworkError view
+				showNetworkErrorView()
 			}
 			if !(dataSource is SkeletonTableViewDataSource) {
 				refreshControl.endRefreshing()
@@ -45,7 +47,7 @@ final class TrendingReposViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-		self.title = viewModel.navigationBarTitle
+		title = viewModel.navigationBarTitle
 
 		setupTableView()
 		showSkeletons()
@@ -80,6 +82,10 @@ final class TrendingReposViewController: UIViewController {
 
 	@objc private func tableViewWasPulledToRefresh() {
 		dataSource = skeletonDataSource
+		refetchTrendingRepos()
+	}
+
+	private func refetchTrendingRepos() {
 		// We are adding a delay here intentionally, for better UX
 		// and so that the user doesn't bombard the server with too many refresh requests
 		DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in
@@ -95,6 +101,20 @@ extension TrendingReposViewController: UITableViewDelegate {
 		tableView.deselectRow(at: indexPath, animated: true)
 		dataSource.viewModels[indexPath.row].isExpanded.toggle()
 		tableView.reloadRows(at: [indexPath], with: .automatic)
+	}
+}
+
+extension TrendingReposViewController: NetworkErrorViewDelegate {
+	func retryButtonWasTapped() {
+		dataSource = skeletonDataSource
+		refetchTrendingRepos()
+	}
+
+	private func showNetworkErrorView() {
+		// We need to keep a strong reference to the networkErrorView
+		self.networkErrorView = NetworkErrorView(frame: view.bounds)
+		self.networkErrorView?.animationViewDelegate = self
+		view.addSubview(networkErrorView!)
 	}
 }
 

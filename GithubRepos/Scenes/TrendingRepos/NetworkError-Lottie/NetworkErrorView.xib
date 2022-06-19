@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NetworkErrorView" customModule="GithubRepos" customModuleProvider="target">
+            <connections>
+                <outlet property="animationView" destination="1bU-Og-NnR" id="ysJ-4P-Bmx"/>
+                <outlet property="retryButton" destination="KSN-dT-c3u" id="zLs-zG-4rv"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bU-Og-NnR" customClass="AnimationView" customModule="Lottie">
+                    <rect key="frame" x="20" y="170" width="374" height="356"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="1bU-Og-NnR" secondAttribute="height" multiplier="207:197" id="Uh2-8A-JTo"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something went wrong.." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQ3-wx-c3i">
+                    <rect key="frame" x="20" y="546" width="374" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="0bP-Ea-sID"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An alien is probably blocking your signal." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bK-X7-HuW">
+                    <rect key="frame" x="20" y="584" width="374" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="6re-2E-hVU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSN-dT-c3u">
+                    <rect key="frame" x="40" y="782" width="334" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Qxe-ht-KzA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="18"/>
+                    <state key="normal" title="RETRY">
+                        <color key="titleColor" systemColor="systemGreenColor"/>
+                    </state>
+                    <connections>
+                        <action selector="retryButtonTapped:" destination="-1" eventType="touchUpInside" id="ced-s3-crQ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <accessibility key="accessibilityConfiguration" identifier="networkErrorView">
+                <bool key="isElement" value="NO"/>
+            </accessibility>
+            <constraints>
+                <constraint firstItem="1bU-Og-NnR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-100" id="0B9-bq-dba"/>
+                <constraint firstItem="dQ3-wx-c3i" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="55u-DW-Ksz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dQ3-wx-c3i" secondAttribute="trailing" constant="20" id="8xg-uA-boA"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="KSN-dT-c3u" secondAttribute="trailing" constant="40" id="J2U-64-0Cc"/>
+                <constraint firstItem="1bU-Og-NnR" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" constant="-20" id="JTh-CL-m7x"/>
+                <constraint firstItem="KSN-dT-c3u" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-30" id="KQA-9v-kke"/>
+                <constraint firstItem="1bK-X7-HuW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="MFd-Po-ygS"/>
+                <constraint firstItem="1bK-X7-HuW" firstAttribute="top" secondItem="dQ3-wx-c3i" secondAttribute="bottom" constant="16" id="S4U-wr-Ccl"/>
+                <constraint firstItem="1bU-Og-NnR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="XHp-hC-QNc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1bK-X7-HuW" secondAttribute="trailing" constant="20" id="b1Y-cO-X6T"/>
+                <constraint firstItem="KSN-dT-c3u" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="bbn-oZ-vio"/>
+                <constraint firstItem="1bU-Og-NnR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="by2-gm-A9v"/>
+                <constraint firstItem="dQ3-wx-c3i" firstAttribute="top" secondItem="1bU-Og-NnR" secondAttribute="bottom" constant="20" id="s0D-XX-SIt"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="131.91964285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

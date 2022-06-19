@@ -9,6 +9,7 @@ import Foundation
 
 @available(iOS, deprecated: 15.0, message: "Use the built-in API instead")
 public extension URLSession {
+
 	/// Start a data task with a `URLRequest` using async/await.
 	/// - parameter request: The `URLRequest` that the data task should perform.
 	/// - returns: A tuple containing the binary `Data` that was downloaded,
