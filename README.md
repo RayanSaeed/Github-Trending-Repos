@@ -4,6 +4,8 @@ A simple single screen app which shows the current trending Github repositories 
 The app has been built using Swift and UIKit with iOS 13 as the deployment target. 
 This was built using Test Driven Development (`TDD`) and MVVM was used as the architecture of choice for this simple app. The `code coverage` for this app is `87.1%`
 
+The fetched JSON data is cached using `URLCache`. The user can fetch fresh data by pulling down on the table view to refresh.
+
 ![GithubRepos](https://user-images.githubusercontent.com/8598858/174490737-44e82ddc-2ada-4f69-a0ba-6ee74453e8a7.png)
 
 #### Code Coverage
