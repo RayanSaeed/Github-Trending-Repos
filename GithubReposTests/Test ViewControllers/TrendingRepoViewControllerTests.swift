@@ -60,8 +60,6 @@ class TrendingRepoViewControllerTests: XCTestCase {
 		expect(mockVM.fetchTrendingReposWasCalled).to(beTrue())
 	}
 
-
-
 	func testViewController_expandsCell_whenTapped() async {
 		// Given
 		let sut = await makeSUT()
