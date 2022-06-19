@@ -108,4 +108,10 @@ extension TrendingReposViewController {
 		view.stopSkeletonAnimation()
 		view.hideSkeleton(transition: .crossDissolve(0.25))
 	}
+
+	// Fix for Dark mode (bug)
+	override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+		super.traitCollectionDidChange(previousTraitCollection)
+		SkeletonAppearance.default.gradient = SkeletonGradient(baseColor: .skeletonDefault)
+	}
 }
