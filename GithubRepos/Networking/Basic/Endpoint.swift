@@ -54,6 +54,8 @@ extension Endpoint {
 		request.httpMethod = method.rawValue
 		request.allHTTPHeaderFields = headers
 
+		request.timeoutInterval = 5
+
 		return request
 	}
 
