@@ -35,10 +35,10 @@ protocol RepositoryCellViewModelable {
 
 struct RepositoryCellViewModel: RepositoryCellViewModelable {
 	var isExpanded: Bool = false
-	var name: String
-	var ownerLogin: String
-	var description: String
-	var language: String
-	var starsCount: String
-	var avatarUrl: URL
+	let name: String
+	let ownerLogin: String
+	let description: String
+	let language: String
+	let starsCount: String
+	let avatarUrl: URL
 }

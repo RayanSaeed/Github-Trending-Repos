@@ -10,22 +10,22 @@ import Foundation
 
 struct RepositoryCellExpandedViewModelStub: RepositoryCellViewModelable {
 	var isExpanded: Bool = expandedStub.isExpanded
-	var name: String = expandedStub.name
-	var ownerLogin: String = expandedStub.ownerLogin
-	var description: String = expandedStub.description
-	var language: String = expandedStub.language
-	var starsCount: String = expandedStub.starsCount
-	var avatarUrl: URL = expandedStub.avatarUrl
+	let name: String = expandedStub.name
+	let ownerLogin: String = expandedStub.ownerLogin
+	let description: String = expandedStub.description
+	let language: String = expandedStub.language
+	let starsCount: String = expandedStub.starsCount
+	let avatarUrl: URL = expandedStub.avatarUrl
 }
 
 struct RepositoryCellCollapsedViewModelStub: RepositoryCellViewModelable {
 	var isExpanded: Bool = collapsedStub.isExpanded
-	var name: String = collapsedStub.name
-	var ownerLogin: String = collapsedStub.ownerLogin
-	var description: String = collapsedStub.description
-	var language: String = collapsedStub.language
-	var starsCount: String = collapsedStub.starsCount
-	var avatarUrl: URL = collapsedStub.avatarUrl
+	let name: String = collapsedStub.name
+	let ownerLogin: String = collapsedStub.ownerLogin
+	let description: String = collapsedStub.description
+	let language: String = collapsedStub.language
+	let starsCount: String = collapsedStub.starsCount
+	let avatarUrl: URL = collapsedStub.avatarUrl
 }
 
 extension RepositoryCellExpandedViewModelStub {
