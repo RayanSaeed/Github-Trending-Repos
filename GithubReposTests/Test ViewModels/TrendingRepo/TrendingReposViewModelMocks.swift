@@ -18,7 +18,7 @@ final class TrendingReposViewModelSuccessfulMock: TrendingReposViewModelable {
 		self.service = service
 	}
 
-	func getTrendingReposListViewModels() -> [RepositoryCellViewModelable]? {
+	func getTrendingReposListViewModels(userInitiatedRequest: Bool) -> [RepositoryCellViewModelable]? {
 		fetchTrendingReposWasCalled = true
 		return [RepositoryCellViewModel.stub]
 	}
@@ -34,7 +34,7 @@ final class TrendingReposViewModelFailureMock: TrendingReposViewModelable {
 		self.service = service
 	}
 
-	func getTrendingReposListViewModels() -> [RepositoryCellViewModelable]? {
+	func getTrendingReposListViewModels(userInitiatedRequest: Bool) -> [RepositoryCellViewModelable]? {
 		fetchTrendingReposWasCalled = true
 		return nil
 	}
