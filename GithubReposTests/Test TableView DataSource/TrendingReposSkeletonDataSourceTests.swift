@@ -9,7 +9,7 @@ import XCTest
 import Nimble
 @testable import GithubRepos
 
-class TrendingReposSkeletonDataSourceTests: XCTestCase {
+final class TrendingReposSkeletonDataSourceTests: XCTestCase {
 
 	private var sut = TrendingReposSkeletonDataSource()
 	private let tableView = UITableView()

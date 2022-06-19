@@ -9,7 +9,7 @@ import XCTest
 import Nimble
 @testable import GithubRepos
 
-class RepositoryTests: XCTestCase {
+final class RepositoryTests: XCTestCase {
 
     func testInit_GithubRepo_withProperties() {
 		// Given

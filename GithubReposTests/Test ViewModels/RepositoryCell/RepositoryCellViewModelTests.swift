@@ -9,7 +9,7 @@ import XCTest
 import Nimble
 @testable import GithubRepos
 
-class RepositoryCellViewModelTests: XCTestCase {
+final class RepositoryCellViewModelTests: XCTestCase {
 
 	func testRepositoryCellViewModel_isExpanded() async {
 		let sut = RepositoryCellExpandedViewModelStub()

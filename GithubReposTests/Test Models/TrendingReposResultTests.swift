@@ -9,7 +9,7 @@ import XCTest
 import Nimble
 @testable import GithubRepos
 
-class TrendingReposResultTests: XCTestCase, Mockable {
+final class TrendingReposResultTests: XCTestCase, Mockable {
 
 	private var sut: TrendingReposResult!
 

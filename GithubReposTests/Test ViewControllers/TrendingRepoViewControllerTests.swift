@@ -9,7 +9,7 @@ import XCTest
 import Nimble
 @testable import GithubRepos
 
-class TrendingRepoViewControllerTests: XCTestCase {
+final class TrendingRepoViewControllerTests: XCTestCase {
 
 	// MARK: - ViewController Tests
 

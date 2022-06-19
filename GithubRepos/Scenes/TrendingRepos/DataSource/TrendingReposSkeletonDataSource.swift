@@ -8,7 +8,7 @@
 import Foundation
 import SkeletonView
 
-class TrendingReposSkeletonDataSource: NSObject, SkeletonTableViewDataSource {
+final class TrendingReposSkeletonDataSource: NSObject, SkeletonTableViewDataSource {
 
 	func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
 		return RepositoryCell.reuseIdentifier

@@ -9,7 +9,7 @@ import XCTest
 import Nimble
 @testable import GithubRepos
 
-class GithubEndpointTests: XCTestCase {
+final class GithubEndpointTests: XCTestCase {
 
 	func testGithubTrendingEndpoint_requestGeneration() throws {
 		let sut = GithubEndpoint.trendingRepos

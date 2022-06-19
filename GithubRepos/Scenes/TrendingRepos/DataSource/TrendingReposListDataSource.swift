@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import Kingfisher
 
-class TrendingReposListDataSource<ViewModel>: NSObject, UITableViewDataSource {
+final class TrendingReposListDataSource<ViewModel>: NSObject, UITableViewDataSource {
 
 	typealias CellConfigurator = (ViewModel, UITableViewCell) -> Void
 

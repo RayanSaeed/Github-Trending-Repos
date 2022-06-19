@@ -9,7 +9,7 @@ import XCTest
 import Nimble
 @testable import GithubRepos
 
-class OwnerTests: XCTestCase {
+final class OwnerTests: XCTestCase {
 
 	func testInit_GithubRepoOwner_withProperties() {
 		let id = 123

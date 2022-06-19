@@ -9,7 +9,7 @@ import XCTest
 import Nimble
 @testable import GithubRepos
 
-class GithubServiceTests: XCTestCase {
+final class GithubServiceTests: XCTestCase {
 
 	func testGithubService_defaultInit() {
 		let sut = GithubService()

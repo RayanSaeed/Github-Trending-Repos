@@ -9,7 +9,7 @@ import XCTest
 import Nimble
 @testable import GithubRepos
 
-class EndpointTests: XCTestCase {
+final class EndpointTests: XCTestCase {
 
 	func testEndpoint_invalidRequestGeneration() throws {
 		let sut = EndpointStubInvalid.invalidHost

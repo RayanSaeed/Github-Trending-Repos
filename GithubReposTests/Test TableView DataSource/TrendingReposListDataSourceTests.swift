@@ -9,7 +9,7 @@ import XCTest
 import Nimble
 @testable import GithubRepos
 
-class TrendingReposListDataSourceTests: XCTestCase {
+final class TrendingReposListDataSourceTests: XCTestCase {
 
 	private var sut: TrendingReposListDataSource<RepositoryCellViewModelable>!
 	private let tableView = UITableView()

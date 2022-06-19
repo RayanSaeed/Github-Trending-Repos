@@ -9,7 +9,7 @@ import XCTest
 import Nimble
 @testable import GithubRepos
 
-class TrendingReposViewModelTests: XCTestCase {
+final class TrendingReposViewModelTests: XCTestCase {
 
     func testTrendingReposViewModel_fetchTrendingRepos_success() async {
 		let mockService = GithubServiceSuccessfulMock()
