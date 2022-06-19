@@ -69,7 +69,7 @@ final class TrendingReposViewController: UIViewController {
 
 	private func fetchTrendingRepos(userInitiated: Bool = false) {
 		Task {
-			if let viewModels = await viewModel.getTrendingReposListViewModels() {
+			if let viewModels = await viewModel.getTrendingReposListViewModels(userInitiatedRequest: userInitiated) {
 				// We also need to keep a strong reference to the data source,
 				// since UITableView only uses a weak reference for it.
 				dataSource = TrendingReposListDataSource.make(for: viewModels)

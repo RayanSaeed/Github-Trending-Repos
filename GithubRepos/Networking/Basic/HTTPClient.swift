@@ -19,6 +19,7 @@ protocol HTTPClient {
 	///   - endpoint: The `Endpoint` object.
 	///   - responseModel: The type of the model to be decoded from the API response.
 	///   - decoder: The `JSONDecoder` object used for decoding the response.
+	///   - loadFromCache: A boolean indicating whether cache is to be ignored or not.
 	///
 	/// - Returns:
 	/// A `Result` that can be a `success` with the decoded response or an `error`
@@ -27,7 +28,8 @@ protocol HTTPClient {
 		session: URLSession,
 		endpoint: Endpoint,
 		responseModel: T.Type,
-		decoder: JSONDecoder
+		decoder: JSONDecoder,
+		loadFromCache: Bool
 	) async -> Result<T, APIError>
 }
 
@@ -36,12 +38,15 @@ extension HTTPClient {
 		session: URLSession = .shared,
 		endpoint: Endpoint,
 		responseModel: T.Type,
-		decoder: JSONDecoder = .init()
+		decoder: JSONDecoder = .init(),
+		loadFromCache: Bool = true
 	) async -> Result<T, APIError> {
 		// Create a URL request.
-		guard let request = endpoint.urlRequest() else {
+		guard var request = endpoint.urlRequest() else {
 			return .failure(.invalidURL)
 		}
+
+		request.cachePolicy = loadFromCache ? .returnCacheDataElseLoad : .reloadIgnoringLocalCacheData
 
 		// Execute the request with URLSessionTask's async method
 		do {
