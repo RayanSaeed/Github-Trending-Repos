@@ -86,8 +86,8 @@ final class TrendingReposViewController: UIViewController {
 	}
 
 	private func refetchTrendingRepos() {
-		// We are adding a delay here intentionally, for better UX
-		// and so that the user doesn't bombard the server with too many refresh requests
+		// We are adding a delay here intentionally, for better UX, demonstration purposes of
+		// SkeletonView and so that the user doesn't bombard the server with too many refresh requests
 		DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in
 			self?.fetchTrendingRepos(userInitiated: true)
 		}
