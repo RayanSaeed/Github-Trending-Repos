@@ -17,6 +17,10 @@
 		C125ADF52859F80700D6B604 /* Mockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125ADF42859F80700D6B604 /* Mockable.swift */; };
 		C125ADFA2859F96A00D6B604 /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125ADF92859F96A00D6B604 /* RepositoryTests.swift */; };
 		C125ADFD285A015700D6B604 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125ADFC285A015700D6B604 /* Repository.swift */; };
+		C12ABCFE2864954600B7ABF4 /* MainCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12ABCFD2864954600B7ABF4 /* MainCoordinatorTests.swift */; };
+		C12ABD012864962A00B7ABF4 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12ABD002864962A00B7ABF4 /* MainCoordinator.swift */; };
+		C12ABD052864987400B7ABF4 /* RepositoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12ABD032864987400B7ABF4 /* RepositoryDetailViewController.swift */; };
+		C12ABD062864987400B7ABF4 /* RepositoryDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C12ABD042864987400B7ABF4 /* RepositoryDetailViewController.xib */; };
 		C153BA51285B58B9005BF177 /* URLSession+AsyncAwait.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153BA50285B58B9005BF177 /* URLSession+AsyncAwait.swift */; };
 		C153BA53285BF5A3005BF177 /* GithubEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153BA52285BF5A3005BF177 /* GithubEndpointTests.swift */; };
 		C153BA57285BFD49005BF177 /* TrendingReposViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153BA56285BFD49005BF177 /* TrendingReposViewModelTests.swift */; };
@@ -80,6 +84,10 @@
 		C125ADF42859F80700D6B604 /* Mockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mockable.swift; sourceTree = "<group>"; };
 		C125ADF92859F96A00D6B604 /* RepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
 		C125ADFC285A015700D6B604 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		C12ABCFD2864954600B7ABF4 /* MainCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorTests.swift; sourceTree = "<group>"; };
+		C12ABD002864962A00B7ABF4 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		C12ABD032864987400B7ABF4 /* RepositoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailViewController.swift; sourceTree = "<group>"; };
+		C12ABD042864987400B7ABF4 /* RepositoryDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryDetailViewController.xib; sourceTree = "<group>"; };
 		C153BA50285B58B9005BF177 /* URLSession+AsyncAwait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+AsyncAwait.swift"; sourceTree = "<group>"; };
 		C153BA52285BF5A3005BF177 /* GithubEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubEndpointTests.swift; sourceTree = "<group>"; };
 		C153BA56285BFD49005BF177 /* TrendingReposViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingReposViewModelTests.swift; sourceTree = "<group>"; };
@@ -174,6 +182,31 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		C12ABCFC2864950E00B7ABF4 /* Test Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				C12ABCFD2864954600B7ABF4 /* MainCoordinatorTests.swift */,
+			);
+			path = "Test Coordinators";
+			sourceTree = "<group>";
+		};
+		C12ABCFF2864960E00B7ABF4 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				C12ABD002864962A00B7ABF4 /* MainCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		C12ABD022864985D00B7ABF4 /* RepositoryDetails */ = {
+			isa = PBXGroup;
+			children = (
+				C12ABD032864987400B7ABF4 /* RepositoryDetailViewController.swift */,
+				C12ABD042864987400B7ABF4 /* RepositoryDetailViewController.xib */,
+			);
+			path = RepositoryDetails;
+			sourceTree = "<group>";
+		};
 		C153BA4F285B58AA005BF177 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				C153BA65285C4286005BF177 /* TrendingRepos */,
+				C12ABD022864985D00B7ABF4 /* RepositoryDetails */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -305,6 +339,7 @@
 				C1BF3920285A44D20004D5BB /* Networking */,
 				C125ADFB285A013E00D6B604 /* Models */,
 				C153BA58285BFD53005BF177 /* Scenes */,
+				C12ABCFF2864960E00B7ABF4 /* Coordinators */,
 				C153BA4F285B58AA005BF177 /* Extensions */,
 				C15A46092859F69000F97EAF /* Resources */,
 			);
@@ -320,6 +355,7 @@
 				C1BF391D285A0EB60004D5BB /* Test Endpoints */,
 				C1BF3928285AEF6E0004D5BB /* Test Networking Service */,
 				C153BA55285BFCD1005BF177 /* Test ViewModels */,
+				C12ABCFC2864950E00B7ABF4 /* Test Coordinators */,
 				C153BA61285C1FB3005BF177 /* Test ViewControllers */,
 				C153BA76285C649F005BF177 /* Test TableView DataSource */,
 			);
@@ -507,6 +543,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C12ABD062864987400B7ABF4 /* RepositoryDetailViewController.xib in Resources */,
 				C15A45E62859F5F500F97EAF /* LaunchScreen.storyboard in Resources */,
 				C15A45E32859F5F500F97EAF /* Assets.xcassets in Resources */,
 				C1250E68285EE6850039D4A2 /* NetworkErrorView.xib in Resources */,
@@ -613,6 +650,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1BF391A285A0B100004D5BB /* TrendingReposResult.swift in Sources */,
+				C12ABD012864962A00B7ABF4 /* MainCoordinator.swift in Sources */,
 				C1BF3935285AF5220004D5BB /* GithubService.swift in Sources */,
 				C1BF3939285AF5810004D5BB /* APIError.swift in Sources */,
 				C153BA67285C49A8005BF177 /* TrendingReposListDataSource.swift in Sources */,
@@ -624,6 +662,7 @@
 				C1250E5E285CDD240039D4A2 /* TrendingReposSkeletonDataSource.swift in Sources */,
 				C153BA51285B58B9005BF177 /* URLSession+AsyncAwait.swift in Sources */,
 				C153BA5A285BFD75005BF177 /* TrendingReposViewModel.swift in Sources */,
+				C12ABD052864987400B7ABF4 /* RepositoryDetailViewController.swift in Sources */,
 				C153BA6A285C4DA4005BF177 /* RepositoryCellViewModel.swift in Sources */,
 				C1BF3937285AF52D0004D5BB /* GithubEndpoints.swift in Sources */,
 				C153BA5D285C06AA005BF177 /* TrendingReposViewController.swift in Sources */,
@@ -650,6 +689,7 @@
 				C1BF392C285AEFAB0004D5BB /* GithubServiceTests.swift in Sources */,
 				C153BA63285C20EA005BF177 /* TrendingRepoViewControllerTests.swift in Sources */,
 				C153BA53285BF5A3005BF177 /* GithubEndpointTests.swift in Sources */,
+				C12ABCFE2864954600B7ABF4 /* MainCoordinatorTests.swift in Sources */,
 				C1BF391F285A0ED00004D5BB /* EndpointTests.swift in Sources */,
 				C1250E63285E05EF0039D4A2 /* TrendingReposSkeletonDataSourceTests.swift in Sources */,
 				C153BA60285C1608005BF177 /* TrendingReposViewModelMocks.swift in Sources */,

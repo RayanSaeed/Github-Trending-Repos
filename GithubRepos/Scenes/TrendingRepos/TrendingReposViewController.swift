@@ -10,6 +10,9 @@ import SkeletonView
 
 final class TrendingReposViewController: UIViewController {
 
+	// MARK: - Instance Properties
+	weak var coordinator: MainCoordinator?
+
 	// MARK: - Private Properties
 	private let viewModel: TrendingReposViewModelable
 	private let refreshControl = UIRefreshControl()
@@ -99,8 +102,10 @@ extension TrendingReposViewController: UITableViewDelegate {
 		guard let dataSource = dataSource as? TrendingReposListDataSource<RepositoryCellViewModelable> else { return }
 
 		tableView.deselectRow(at: indexPath, animated: true)
-		dataSource.viewModels[indexPath.row].isExpanded.toggle()
+		//dataSource.viewModels[indexPath.row].isExpanded.toggle()
 		tableView.reloadRows(at: [indexPath], with: .automatic)
+
+		coordinator?.userDidTapRepository(viewModel: dataSource.viewModels[indexPath.row])
 	}
 }
 

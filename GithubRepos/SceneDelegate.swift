@@ -10,6 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 	var window: UIWindow?
+	var mainCoordinator: MainCoordinator?
 
 	func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 		// Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -17,8 +18,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		// This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 		guard let windowScene = (scene as? UIWindowScene) else { return }
 
-		let rootVC = TrendingReposViewController()
-		let navVC = UINavigationController(rootViewController: rootVC)
+		let navVC = UINavigationController()
+
+		mainCoordinator = MainCoordinator(navigationController: navVC)
+		mainCoordinator?.start()
 
 		window = UIWindow(windowScene: windowScene)
 		window?.windowScene = windowScene
@@ -26,4 +29,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		window?.makeKeyAndVisible()
 	}
 }
-
