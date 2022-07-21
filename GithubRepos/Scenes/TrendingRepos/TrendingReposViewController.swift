@@ -102,10 +102,10 @@ extension TrendingReposViewController: UITableViewDelegate {
 		guard let dataSource = dataSource as? TrendingReposListDataSource<RepositoryCellViewModelable> else { return }
 
 		tableView.deselectRow(at: indexPath, animated: true)
-		//dataSource.viewModels[indexPath.row].isExpanded.toggle()
+		dataSource.viewModels[indexPath.row].isExpanded.toggle()
 		tableView.reloadRows(at: [indexPath], with: .automatic)
 
-		coordinator?.userDidTapRepository(viewModel: dataSource.viewModels[indexPath.row])
+//		coordinator?.userDidTapRepository(viewModel: dataSource.viewModels[indexPath.row])
 	}
 }
 
