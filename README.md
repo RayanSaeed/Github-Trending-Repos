@@ -25,7 +25,7 @@ The fetched JSON data is cached using `URLCache`. The user can fetch fresh data 
 - Nimble (for testing)
 - Lottie (for lottie animations)
 - Kingfisher (for fetching images)
-- SkeletonView (for skeleton/shimemer views)
+- SkeletonView (for skeleton/shimmering views)
 
 ### Features
 - Skeleton View
